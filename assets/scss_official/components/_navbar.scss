@@ -1,0 +1,59 @@
+.navbar{
+	height: 90px;
+    background-color: #FFF;
+}
+body{
+	padding-top: 90px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+	padding-left: rem-calc(50px);
+	padding-right: rem-calc(50px);
+	@include desktop(fhd){
+		padding-left: rem-calc(30px);
+		padding-right: rem-calc(30px);
+	}
+	@include desktop(hd){
+		padding-left: rem-calc(20px);
+		padding-right: rem-calc(20px);
+	}
+}
+
+.navbar-brand{
+	@media (min-width: 1200px){
+	margin-left: rem-calc(80px);
+
+	}
+}
+
+// .mega-menu{
+// 	min-width: rem-calc(130px);
+// 	@include card-shadow-light;
+// 	border: 0px solid transparent;
+// }
+
+.megamenu-li {
+	position: static;
+}
+
+.megamenu {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	&.show{
+		    margin-top: -1px;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+    border-radius: 0px;
+    border-top: 0px;
+	}
+}
+
+.container-fluid.container-megamenu{
+	@media (min-width: 1100px){
+		max-width: calc(100% - 11%);
+	}
+
+}

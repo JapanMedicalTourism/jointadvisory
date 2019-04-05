@@ -1,0 +1,6 @@
+.about-header{
+	@include primary_font('regular');
+	@include font-size(30px);
+	color: color('dark');
+	line-height: rem-calc(55px);
+}

@@ -1,0 +1,21 @@
+.btn{
+	@include primary_font('semibold');
+	@include font-size(15px);
+	padding: rem-calc(15px) rem-calc(40px);
+}
+
+.btn-primary{
+	color: #FFF;
+	background-color: color('primary');
+	border-color: color('primary');
+	transition: 0.3s ease-in-out;
+	transform: translateY(3px);
+	@include card-shadow-light;
+	@include click_states(){
+		background-color: darken(color('primary'), 5%);
+		border-color: darken(color('primary'), 5%);
+		box-shadow: -1px 6px 20px 0px #114a4e66;
+		transform: translateY(0px);
+	}
+}
+
