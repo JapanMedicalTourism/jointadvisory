@@ -142,8 +142,8 @@
                                                 Package</a>
                                             <a href="./service-item.html">Documentation
                                                 Package</a>
-                                            <a href="./consulting-services.html"><small class="text-muted">Explore all
-                                                    our services</small></a>
+                                            <a href="./consulting-services.html"><small class="text-muted">Explore all our
+                                                    services</small></a>
                                         </div>
                                     </div>
                                     <div class="col-md-4 sub-content">
@@ -160,11 +160,11 @@
                                             <a href="./service-item.html">Continuous
                                                 Improvement
                                                 Planning</a>
-                                            <a href="./consulting-services.html"><small class="text-muted">Explore all
-                                                    our services</small></a>
+                                            <a href="./consulting-services.html"><small class="text-muted">Explore all our
+                                                    services</small></a>
                                         </div>
                                     </div>
-
+    
                                 </div>
                             </div>
                         </div>
@@ -175,10 +175,46 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><img
+    
+                    <li class="nav-item dropdown megamenu-li">
+                        <a class="nav-link dropdown-toggle" href="" id="about-megamenu" data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"><img
                                  src="./assets/img/icons/search.svg" alt="Search Joint Advisory" width="20px"></a>
+                        <div class="dropdown-menu megamenu" aria-labelledby="about-megamenu">
+                            <div class="container-fluid container-megamenu">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="needs-validation" method="GET" novalidate id="search-form"
+                                              action="./search-results.html">
+                                            <div class="form-row styled-links dark">
+                                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up">
+                                                    <label for="validationCustom01"><a>Search Joint Advisory</a></label>
+                                                    <input type="text" list="keyword" name="search" class="form-control"
+                                                           id="validationCustom01"
+                                                           placeholder="What are you looking for?" required
+                                                           autocomplete="off">
+                                                    <div class="invalid-feedback">
+                                                        Please enter a keyword.
+                                                    </div>
+                                                    <datalist id="keyword">
+                                                        <option value="Joint Advisory">
+                                                        <option value="Learn Our Process">
+                                                        <option value="Initial Survey Preparation Package">
+                                                        <option value="Continuous Survey Readiness Package">
+                                                        <option value="Documentation Package">
+                                                    </datalist>
+                                                </div>
+                                            </div>
+                                            <button class="" style="display: none;"
+                                                    type="submit">Send Details</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
+    
                 </ul>
             </div>
         </div>

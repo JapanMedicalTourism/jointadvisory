@@ -29,7 +29,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content=" ./assets/favico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <title>Joint Advisory</title>
+    <title>The Team at Joint Advisory</title>
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/slick.css" />
@@ -53,10 +53,10 @@
             </a>
             <div class="collapse navbar-collapse" id="ja-navbar-contents">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown megamenu-li">
+                    <li class="nav-item active dropdown megamenu-li">
                         <a class="nav-link dropdown-toggle" href="" id="about-megamenu" data-toggle="dropdown"
                            aria-haspopup="true"
                            aria-expanded="false">About</a>
@@ -175,10 +175,46 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><img
+    
+                    <li class="nav-item dropdown megamenu-li">
+                        <a class="nav-link dropdown-toggle" href="" id="about-megamenu" data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false"><img
                                  src="./assets/img/icons/search.svg" alt="Search Joint Advisory" width="20px"></a>
+                        <div class="dropdown-menu megamenu" aria-labelledby="about-megamenu">
+                            <div class="container-fluid container-megamenu">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="needs-validation" method="GET" novalidate id="search-form"
+                                              action="./search-results.html">
+                                            <div class="form-row styled-links dark">
+                                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up">
+                                                    <label for="validationCustom01"><a>Search Joint Advisory</a></label>
+                                                    <input type="text" list="keyword" name="search" class="form-control"
+                                                           id="validationCustom01"
+                                                           placeholder="What are you looking for?" required
+                                                           autocomplete="off">
+                                                    <div class="invalid-feedback">
+                                                        Please enter a keyword.
+                                                    </div>
+                                                    <datalist id="keyword">
+                                                        <option value="Joint Advisory">
+                                                        <option value="Learn Our Process">
+                                                        <option value="Initial Survey Preparation Package">
+                                                        <option value="Continuous Survey Readiness Package">
+                                                        <option value="Documentation Package">
+                                                    </datalist>
+                                                </div>
+                                            </div>
+                                            <button class="" style="display: none;"
+                                                    type="submit">Send Details</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
+    
                 </ul>
             </div>
         </div>
@@ -661,6 +697,23 @@
     // });
     </script>
     <script>
+        (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
     </script>
 </body>
 
