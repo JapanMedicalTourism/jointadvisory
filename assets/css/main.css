@@ -126,7 +126,7 @@ h1 {
 }
 @media (max-width: 660px) {
   h1 {
-    font-size: 100%;
+    font-size: 120%;
   }
 }
 
@@ -136,7 +136,7 @@ h2 {
 }
 @media (max-width: 660px) {
   h2 {
-    font-size: 100%;
+    font-size: 120%;
   }
 }
 
@@ -146,7 +146,7 @@ h3 {
 }
 @media (max-width: 660px) {
   h3 {
-    font-size: 100%;
+    font-size: 120%;
   }
 }
 
@@ -156,7 +156,7 @@ h4 {
 }
 @media (max-width: 660px) {
   h4 {
-    font-size: 100%;
+    font-size: 120%;
   }
 }
 
@@ -166,7 +166,7 @@ h5 {
 }
 @media (max-width: 660px) {
   h5 {
-    font-size: 100%;
+    font-size: 120%;
   }
 }
 
@@ -176,7 +176,7 @@ h6 {
 }
 @media (max-width: 660px) {
   h6 {
-    font-size: 100%;
+    font-size: 120%;
   }
 }
 
@@ -186,7 +186,7 @@ small {
 }
 @media (max-width: 660px) {
   small {
-    font-size: 100%;
+    font-size: 120%;
   }
 }
 
@@ -196,7 +196,7 @@ p {
 }
 @media (max-width: 660px) {
   p {
-    font-size: 100%;
+    font-size: 120%;
   }
 }
 
@@ -467,6 +467,8 @@ body {
   left: 0;
   right: 0;
   padding: 15px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .megamenu.show {
   margin-top: -1px;
@@ -485,10 +487,16 @@ body {
 .full-window-height {
   min-height: 900px;
   /* ONLY if you want the video to fill the entire browser window. Support: http://caniuse.com/#search=vh */
+  max-height: 950px;
 }
 @media (max-height: 1400px) {
   .full-window-height {
-    height: calc(100vh - 90px);
+    max-height: calc(100vh - 90px);
+  }
+}
+@media (max-width: 1200px) {
+  .full-window-height {
+    min-height: 350px;
   }
 }
 
@@ -550,12 +558,22 @@ body {
   pointer-events: none;
   position: absolute;
   left: 0px;
-  right: 0px;
+  top: 25px;
   width: 100%;
   min-height: calc(800px + 90px);
   height: calc(100vh + 90px);
   background: rgba(0, 0, 0, 0.3);
   z-index: 100;
+}
+@media (max-height: 1400px) {
+  .video-filter {
+    top: 0px;
+  }
+}
+@media (max-width: 1200px) {
+  .video-filter {
+    top: 0px;
+  }
 }
 
 .video-bg video {
@@ -732,26 +750,26 @@ form textarea {
   }
 }
 
-.slick-dots {
+.featured-slick .slick-dots {
   bottom: unset;
   top: 553px;
   text-align: right;
   padding-right: 0px;
 }
 @media (max-width: 1440px) {
-  .slick-dots {
+  .featured-slick .slick-dots {
     top: 350px;
   }
 }
 @media (max-width: 1024px) {
-  .slick-dots {
+  .featured-slick .slick-dots {
     top: unset;
     bottom: -50px;
     text-align: center;
   }
 }
 
-.slick-dots li.slick-active button:before {
+.featured-slick .slick-dots li.slick-active button:before {
   color: #155E63;
   background: #155E63;
 }
@@ -842,7 +860,7 @@ form textarea {
   margin-bottom: 10px;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  background-size: 103%;
+  background-size: cover;
   background-position: 30% center;
   background-repeat: no-repeat;
 }

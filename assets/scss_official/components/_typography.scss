@@ -3,7 +3,7 @@
 	#{$selector} {
 		@include font-size($size); 
 		@include mobile(){
-			font-size: 100%;
+			font-size: 120%;
 		}
 	}
 }

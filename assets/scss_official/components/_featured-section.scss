@@ -33,7 +33,7 @@
 	}
 }
 
-.slick-dots{
+.featured-slick .slick-dots{
 	bottom: unset;
 	top: 553px;  
 	text-align: right;
@@ -47,7 +47,7 @@
 		text-align: center
 	}
 }
-.slick-dots li.slick-active button:before{
+.featured-slick .slick-dots li.slick-active button:before{
 	color: color('primary');
 	background: color('primary');
 } 

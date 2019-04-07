@@ -1,8 +1,12 @@
 .full-window-height {
   min-height: 900px;
   /* ONLY if you want the video to fill the entire browser window. Support: http://caniuse.com/#search=vh */
+  max-height: 950px;
   @media (max-height: 1400px){
-    height: calc(100vh - 90px); 
+    max-height: calc(100vh - 90px); 
+  }
+   @media (max-width: 1200px){
+    min-height: 350px; 
   }
 }
 .video-bg {
@@ -48,7 +52,13 @@
   pointer-events: none;
   position: absolute;
   left: 0px;
-  right: 0px;
+  top: 25px;
+  @media (max-height: 1400px){
+    top: 0px;
+  }
+  @media (max-width: 1200px){
+    top: 0px;
+  }
   width: 100%;
   min-height: calc(800px + 90px);
   height: calc(100vh + 90px);
