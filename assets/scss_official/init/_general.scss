@@ -122,6 +122,10 @@ a{
   z-index: 2;
 	   height: 149px;
  pointer-events: none;
+	&.wave-up{
+		bottom: unset;
+		top: -149px;
+	}
 }
 
  
