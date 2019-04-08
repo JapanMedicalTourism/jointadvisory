@@ -74,6 +74,15 @@
 			@include font-size(20px);
 			line-height: 1.6; 
 		}
+		&.bio{
+			p{
+				margin-bottom: 50px;
+				font-size: 17px;
+				line-height: 2.4;
+				font-family: "Merriweather", serif;
+			}
+			
+		}
 	}
 	> a.feature-head{
 		margin-top: 10px;
@@ -137,6 +146,10 @@
 .vertical-link-list{
 	$parent : &;
 	padding-top: 10px;
+	img{
+		width: 20px;
+		margin-right: 10px;
+	}
 	> * {
 		color: color('dark');
 		@include primary_font('light');

@@ -1,6 +1,7 @@
 .navbar{
 	height: 90px;
     background-color: #FFF;
+     z-index: 5500;
 }
 body{
 	padding-top: 90px;
@@ -44,7 +45,7 @@ body{
 	padding: 15px;
 	padding-top: 40px;
 	padding-bottom: 40px;
-
+ 
 	&.show{
 		    margin-top: -1px;
 		margin-left: -1px;
