@@ -24,7 +24,7 @@
 	z-index: 100;
 	& + *{
 		margin-top: 700px;
-		box-shadow: 1px -6px 14px 0px rgba(33, 37, 41, 0.43);
+		// box-shadow: 1px -6px 14px 0px rgba(33, 37, 41, 0.43);
 		@include desktop(fhd){
 			margin-top: 500px;
 		}

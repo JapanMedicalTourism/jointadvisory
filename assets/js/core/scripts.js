@@ -31,7 +31,28 @@ $(document).ready(function () {
     });
 });
  
-
+var bone1;
+$('#wave-1').wavify({
+    height: 120,
+    amplitude: 15,
+    speed: 0.155,
+    bones: bone1,
+    color: 'rgba(21, 94, 99, 1)'
+});  
+$('#wave-3').wavify({
+    height: 120,
+    amplitude: 15,
+    speed: 0.155,
+    bones: bone1,
+    color: 'rgba(21, 94, 99, 1)'
+}); 
+$('#banner-wave').wavify({
+    height: 120,
+    amplitude: 15,
+    speed: 0.155,
+    bones: bone1,
+    color: '#FFF'
+}); 
 var mobile_breakpoint = 768;
 var mobile_xs_breakpoint = 660;
 

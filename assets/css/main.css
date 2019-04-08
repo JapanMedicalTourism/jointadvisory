@@ -268,14 +268,22 @@ p {
   font-size: 35px;
   font-size: 2.1875rem;
 }
+.article-content .title.smaller {
+  font-size: 1.125rem !important;
+  margin-bottom: 3px;
+}
 .article-content .description {
   color: #444444;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 40px;
+}
+.article-content .description.smaller {
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
 .article-content .description p {
   font-size: 20px;
@@ -1247,7 +1255,7 @@ body {
   text-align: center;
   color: #FFF;
   z-index: 101;
-  bottom: 30px;
+  bottom: 50px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -1858,8 +1866,6 @@ form textarea {
 }
 .fixed-banner + * {
   margin-top: 700px;
-  -webkit-box-shadow: 1px -6px 14px 0px rgba(33, 37, 41, 0.43);
-          box-shadow: 1px -6px 14px 0px rgba(33, 37, 41, 0.43);
 }
 @media (max-width: 1440px) {
   .fixed-banner + * {

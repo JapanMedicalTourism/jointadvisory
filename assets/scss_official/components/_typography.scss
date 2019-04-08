@@ -56,14 +56,20 @@
 		@include primary_font('regular'); 
 		margin-bottom: 10px;
 		@include font-size(35px);
+		&.smaller{
+			font-size: rem-calc(18px) !important;
+			margin-bottom: 3px;
+		}
 	}
 	.description{
 		color: color('dark');
 		@include secondary_font('regular');
-		@include font-size(20px);
-		line-height: 1.6;
-
+		@include font-size(18px);
+		line-height: 1.6; 
 		margin-bottom: 40px;
+		&.smaller{
+			@include font-size(13px);
+		}
 		p{ 
 			@include font-size(20px);
 			line-height: 1.6; 
