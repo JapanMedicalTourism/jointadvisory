@@ -114,3 +114,14 @@ a{
 .card__shadow--dark{
 	@include card_shadow_dark
 }
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+	   height: 149px;
+ pointer-events: none;
+}
+
+ 

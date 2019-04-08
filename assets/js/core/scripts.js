@@ -2,7 +2,29 @@
 	KBZPay Common script
 */
 
+$('document').ready(function () {
+    var trigger = $('#hamburger'),
+        isClosed = true;
 
+    trigger.click(function () {
+        burgerTime();
+    });
+
+    function burgerTime() {
+        if (isClosed == true) {
+            trigger.removeClass('is-closed');
+            trigger.addClass('is-open');
+            isClosed = false;
+            $('.sidebar').addClass('open');
+        } else {
+            trigger.removeClass('is-open');
+            $('.sidebar').removeClass('open');
+            trigger.addClass('is-close');
+            isClosed = true;
+        }
+    }
+
+});
 $(document).ready(function () {
     $(".megamenu").on("click", function (e) {
         e.stopPropagation();
