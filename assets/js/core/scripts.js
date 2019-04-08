@@ -184,7 +184,7 @@ $(document).ready(function() {
 	- autoplays an embedded YouTube video
 	- Used in personal, business, agent
 */
-$('.videoplay').on('click', function() {
+$('.videoplay').on('click', function() { 
     $(".youtube-video").fadeIn();
     $(".video-placeholder").fadeOut();
     $(".youtube-video")[0].src += "&autoplay=1";
