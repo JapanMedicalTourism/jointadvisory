@@ -67,9 +67,7 @@ a{
 }
 
 .splitText{
-	&__holder{
-		
-	}
+	 
 	&__word{
 		font-size: 1em;
 		vertical-align: top;
@@ -114,7 +112,13 @@ a{
 .card__shadow--dark{
 	@include card_shadow_dark
 }
+ 
 
+.modal-backdrop{
+	z-index: 5600;
+	display: none !important;
+	pointer-events: none;
+}
 .wave {
   position: absolute;
   bottom: 0;
@@ -128,4 +132,3 @@ a{
 	}
 }
 
- 

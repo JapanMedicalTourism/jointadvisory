@@ -74,7 +74,7 @@
 			@include font-size(20px);
 			line-height: 1.6; 
 		}
-		&.bio{
+		&.bio, &.article{
 			p{
 				margin-bottom: 50px;
 				font-size: 17px;
@@ -82,7 +82,7 @@
 				font-family: "Merriweather", serif;
 			}
 			
-		}
+		} 
 	}
 	> a.feature-head{
 		margin-top: 10px;
@@ -113,7 +113,7 @@
 	padding-right: 50px;
 	@include secondary_font('regular');
 	letter-spacing: 1px;
-	font-transform: capitalize;
+	text-transform: capitalize;
 	color: color('primary'); 
 	&:after{
 		position: absolute;
@@ -123,7 +123,7 @@
 		transform: translateY(-45%);
 		width:  30px;
 		height: 30px;
-		background:{
+		background: {
 			image: url('../img/icons/arrow-left-grn.svg');
 			repeat: no-repeat;
 			size: contain;
@@ -175,7 +175,7 @@
 			transform: translateY(-50%);
 			width: 20px;
 			height: 11px;
-			background:{
+			background: {
 				image: url('../img/icons/caret-right.svg');
 				repeat: no-repeat;
 				size: contain;
@@ -204,7 +204,7 @@
 			color: color('primary');
 		}
 		> a:after{
-			background:{
+			background: {
 				image: url('../img/icons/caret-right-dark.svg');
 				repeat: no-repeat;
 				size: contain;
@@ -216,21 +216,21 @@
 // Gradients
 .gradient-1 { 
 	background: linear-gradient(to right, #155E63 0%, #8E56C6 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	fill: transparent;
 }
 .gradient-2 { 
 	background: linear-gradient(to right, #045D63 0%, #C67156 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	fill: transparent;
 }
 .gradient-3 { 
 	background: linear-gradient(to right, #045D63 0%, #00C0C0 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	fill: transparent;
 }
 .gradient-4 { 
 	background: linear-gradient(to right, #7A00C0 0%, #045D63 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	fill: transparent;
 }
