@@ -312,6 +312,12 @@ p {
 .article-content > a.feature-head:hover .category {
   background-color: rgba(21, 94, 99, 0.1);
 }
+.article-content.shrink-size h1 {
+  font-size: 1.5rem;
+}
+.article-content.shrink-size p {
+  font-size: 1rem;
+}
 
 .styled-links.dark a:not(.link-re) {
   position: relative;
@@ -1392,6 +1398,32 @@ form textarea {
           box-shadow: -1px 6px 20px 0px #114a4e66;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
+}
+
+/* Override modal */
+.modal {
+  z-index: 10000;
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    max-width: 992px;
+  }
+}
+
+.modal-header {
+  border-bottom: 0px solid transparent;
+  padding-bottom: 0px;
+}
+
+.modal-backdrop {
+  z-index: 5600;
+  pointer-events: none;
+}
+
+.request-quote-form {
+  -webkit-transform: scale(0.8) translate(-45px, -90px);
+          transform: scale(0.8) translate(-45px, -90px);
 }
 
 .featured-banner {
