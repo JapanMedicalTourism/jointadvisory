@@ -114,11 +114,7 @@ a{
 }
  
 
-.modal-backdrop{
-	z-index: 5600;
-	display: none !important;
-	pointer-events: none;
-}
+
 
 .wave {
   position: absolute;
@@ -132,4 +128,6 @@ a{
 		top: -149px;
 	}
 }
+
+
 

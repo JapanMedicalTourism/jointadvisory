@@ -294,7 +294,7 @@ p {
   font-size: 1.25rem;
   line-height: 1.6;
 }
-.article-content .description.bio p {
+.article-content .description.bio p, .article-content .description.article p {
   margin-bottom: 50px;
   font-size: 17px;
   line-height: 2.4;
@@ -305,6 +305,12 @@ p {
 }
 .article-content > a.feature-head:hover .category {
   background-color: rgba(21, 94, 99, 0.1);
+}
+.article-content.shrink-size h1 {
+  font-size: 1.5rem;
+}
+.article-content.shrink-size p {
+  font-size: 1rem;
 }
 
 .styled-links.dark a:not(.link-re) {
@@ -326,7 +332,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  font-transform: capitalize;
+  text-transform: capitalize;
   color: #155E63;
 }
 .link-re:after {
@@ -431,29 +437,29 @@ p {
 .gradient-1 {
   background: -webkit-gradient(linear, left top, right top, from(#155E63), to(#8E56C6));
   background: linear-gradient(to right, #155E63 0%, #8E56C6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  fill: transparent;
 }
 
 .gradient-2 {
   background: -webkit-gradient(linear, left top, right top, from(#045D63), to(#C67156));
   background: linear-gradient(to right, #045D63 0%, #C67156 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  fill: transparent;
 }
 
 .gradient-3 {
   background: -webkit-gradient(linear, left top, right top, from(#045D63), to(#00C0C0));
   background: linear-gradient(to right, #045D63 0%, #00C0C0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  fill: transparent;
 }
 
 .gradient-4 {
   background: -webkit-gradient(linear, left top, right top, from(#7A00C0), to(#045D63));
   background: linear-gradient(to right, #7A00C0 0%, #045D63 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  fill: transparent;
 }
 
 .navbar {
@@ -1386,6 +1392,32 @@ form textarea {
           box-shadow: -1px 6px 20px 0px #114a4e66;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
+}
+
+/* Override modal */
+.modal {
+  z-index: 10000;
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    max-width: 992px;
+  }
+}
+
+.modal-header {
+  border-bottom: 0px solid transparent;
+  padding-bottom: 0px;
+}
+
+.modal-backdrop {
+  z-index: 5600;
+  pointer-events: none;
+}
+
+.request-quote-form {
+  -webkit-transform: scale(0.8) translate(-45px, -90px);
+          transform: scale(0.8) translate(-45px, -90px);
 }
 
 .featured-banner {

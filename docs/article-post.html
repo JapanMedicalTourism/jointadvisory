@@ -397,28 +397,7 @@
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             Request for a Quote <i class="fa fa-cash"></i>
-                        </button>
-                        
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        ...
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        </button> 
                     </div>
 
                 </div>
@@ -694,6 +673,96 @@
         </div>
     </footer>
     <!-- End Footer Section -->
+
+    <!-- Request for Quote Modal  -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="section-title full-width">REQUEST FOR A QUOTE</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="font-size: 50%;">
+                    <div class="row"> 
+                        <div class="col-lg-6">
+                            <!--  -->
+                            <div class="article-content shrink-size styled-links dark">
+                                <h1 class="" data-aos_hidden="fadeUp">A personalized plan to increase
+                                    growth and make your ideas a success.</h1>
+                                <p data-aos_hidden="fade-up">
+                                    Would you like to speak to one of our consultants over the phone? Just submit your
+                                    details and we’ll be in touch shortly. You can also email us if you would prefer.
+                                </p>
+                                <p data-aos_hidden="fade-up" data-aos_hidden-delay="100">
+                                    We inspire clients to make their most challenging business decisions with confidence.
+                                    Send us a <a href="#register-form">message</a>, or phone <a href="tel:+81342436050">+81
+                                        3-4243-6050</a> between 10:00 and 18:00 Monday to Friday — we would be delighted to
+                                    speak about how we could help your firm.
+                                </p>
+                            </div>
+                            <br><br>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Form -->
+                            <form class="needs-validation request-quote-form" novalidate id="register-form">
+                                <div class="form-row styled-links dark">
+                                    <div class="col-md-12 mb-3" data-aos_hidden="fade-up">
+                                        <label for="validationCustom01"><a>Full Name / Company</a></label>
+                                        <input type="text" class="form-control" id="validationCustom01"
+                                               placeholder="やまだ たろう / ABC Company" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="100">
+                                        <label for="validationCustom02"><a>Email Address</a></label>
+                                        <input type="text" class="form-control" id="validationCustom02"
+                                               placeholder="hellothere@domain.com" required>
+                                        <div class="invalid-feedback">
+                                            Please provide us your email address.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="200">
+                                        <label for="validationCustom04"><a>Contact Number</a></label>
+                                        <input type="text" class="form-control" id="validationCustom04"
+                                               placeholder="Your valid contact number" required>
+                                        <div class="invalid-feedback">
+                                            Please provide us a phone number so we can contact you.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="300">
+                                        <label for="validationCustom03"><a>Message</a></label>
+                                        <textarea class="form-control" id="validationCustom03" rows="2" required
+                                                  placeholder="Leave us your message and we'll be in touch shortly." >I would like to request a quote please.</textarea>
+                                        <div class="invalid-feedback">
+                                            Please leave us a message.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="captcha-wrapper">
+                                        <img src="./assets/img/captcha-placeholder.png" alt="captcha-placeholder"
+                                             height="80px">
+                                    </div>
+                                </div>
+                                <div data-aos_hidden="fade-up" data-aos_hidden-delay="400"><button class="btn btn-primary"
+                                            type="submit">Send Details</button></div>
+                            </form>
+                            <!-- End Form -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Request for Quote Modal  -->
     <!-- Vendor Scripts -->
     <script src="assets/js/core/jquery-3.3.1.min.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
