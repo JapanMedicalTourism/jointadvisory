@@ -120,6 +120,12 @@ a:hover {
           box-shadow: 0px 1px 18px 0px rgba(33, 37, 41, 0.36);
 }
 
+.modal-backdrop {
+  z-index: 5600;
+  display: none !important;
+  pointer-events: none;
+}
+
 .wave {
   position: absolute;
   bottom: 0;
@@ -294,7 +300,7 @@ p {
   font-size: 1.25rem;
   line-height: 1.6;
 }
-.article-content .description.bio p {
+.article-content .description.bio p, .article-content .description.article p {
   margin-bottom: 50px;
   font-size: 17px;
   line-height: 2.4;
@@ -326,7 +332,7 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
-  font-transform: capitalize;
+  text-transform: capitalize;
   color: #155E63;
 }
 .link-re:after {
@@ -431,29 +437,29 @@ p {
 .gradient-1 {
   background: -webkit-gradient(linear, left top, right top, from(#155E63), to(#8E56C6));
   background: linear-gradient(to right, #155E63 0%, #8E56C6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  fill: transparent;
 }
 
 .gradient-2 {
   background: -webkit-gradient(linear, left top, right top, from(#045D63), to(#C67156));
   background: linear-gradient(to right, #045D63 0%, #C67156 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  fill: transparent;
 }
 
 .gradient-3 {
   background: -webkit-gradient(linear, left top, right top, from(#045D63), to(#00C0C0));
   background: linear-gradient(to right, #045D63 0%, #00C0C0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  fill: transparent;
 }
 
 .gradient-4 {
   background: -webkit-gradient(linear, left top, right top, from(#7A00C0), to(#045D63));
   background: linear-gradient(to right, #7A00C0 0%, #045D63 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  fill: transparent;
 }
 
 .navbar {
@@ -1944,5 +1950,4 @@ footer .sub-content .vertical-link-list a img {
   margin-right: 10px;
   margin-bottom: 10px;
 }
-
 /*# sourceMappingURL=main.css.map */
