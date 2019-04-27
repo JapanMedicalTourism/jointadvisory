@@ -1,0 +1,244 @@
+// Set default font sizes
+@each $selector, $size in $font-sizes{
+	#{$selector} {
+		@include font-size($size); 
+		@include mobile(){
+			font-size: 120%;
+		}
+	}
+}
+
+.section-title{
+	@include secondary_font('semibold');
+	@include font-size(20px);
+	text-transform: uppercase;
+	color: color('primary');
+	letter-spacing: 3px;
+	border-bottom: 1px solid color('gray');
+	width: calc(100% - 100px);
+	&.centered{
+		text-transform: capitalize;
+		border: 0px solid transparent;
+		letter-spacing: 0px;
+		text-align: center;
+		width: 100%;
+		@include font-size(40px);
+	}
+	&.full-width{
+		width: 100%;
+	}
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	// margin-left: rem-calc(10px);
+	@include desktop(hd){
+		margin-left: 0px;
+	}
+	@include laptop(){
+		width: 100%;
+	}
+}
+
+.article-content{
+	* {
+		text-align: left !important;
+	} 
+	.category{
+		color: color('dark');
+		@include secondary_font('semibold');
+		letter-spacing: 2px; 
+		margin-bottom: 10px;
+		@include font-size(15px);
+		transition: 0.3s ease-in-out;
+		text-transform: uppercase;
+	}
+	.title{
+		color: color('primary');
+		@include primary_font('regular'); 
+		margin-bottom: 10px;
+		@include font-size(35px);
+		&.smaller{
+			font-size: rem-calc(18px) !important;
+			margin-bottom: 3px;
+		}
+	}
+	.description{
+		color: color('dark');
+		@include secondary_font('regular');
+		@include font-size(18px);
+		line-height: 1.6; 
+		margin-bottom: 40px;
+		&.smaller{
+			@include font-size(13px);
+		}
+		p{ 
+			@include font-size(20px);
+			line-height: 1.6; 
+		}
+		&.bio, &.article{
+			p{
+				margin-bottom: 50px;
+				font-size: 17px;
+				line-height: 2.4;
+				font-family: "Merriweather", serif;
+			}
+			
+		} 
+	}
+	> a.feature-head{
+		margin-top: 10px;
+		&:hover .category{
+			background-color: rgba(#155E63, 0.1);
+		}
+	} 
+	&.shrink-size{
+		h1{
+			font-size: 1.5rem;
+		}
+		p{
+			font-size: 1rem;
+		}
+	}
+}
+
+.styled-links{
+	&.dark{
+		a:not(.link-re){
+			position: relative; 
+			color: darken(color('dark'), 10%);
+			z-index: 50;
+			background-color: rgba(#155E63, 0.1);
+			transition: 0.3s ease-in-out;
+			&:hover{
+				text-decoration: none;
+				background-color: rgba(#155E63, 0.2);
+			}
+		}
+	}
+}
+
+.link-re{ 
+	position: relative;
+	padding-right: 50px;
+	@include secondary_font('regular');
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	color: color('primary'); 
+	&:after{
+		position: absolute;
+		content: '';
+		right: 0px;
+		top: 51%;
+		transform: translateY(-45%);
+		width:  30px;
+		height: 30px;
+		background: {
+			image: url('../img/icons/arrow-left-grn.svg');
+			repeat: no-repeat;
+			size: contain;
+		}
+		// transition: 0.3s ease-in-out;
+		opacity: 1;
+	} 
+	&:hover:after{
+		animation-name: arrowSlideRight;
+		animation-duration: 0.4s; 
+    	animation-fill-mode: both; 
+	}
+	&:hover{
+		color: color('secondary'); 
+	}
+}
+
+
+
+.vertical-link-list{
+	$parent : &;
+	padding-top: 10px;
+	img{
+		width: 20px;
+		margin-right: 10px;
+	}
+	> * {
+		color: color('dark');
+		@include primary_font('light');
+		@include font-size(17px);
+	}
+	&.light{
+		*{
+			color: #FFF;
+		}
+	} 
+	> a{
+		display: block;
+		margin-bottom: 10px;
+		width: 100%;
+		position: relative; 
+		padding-right: 20px;
+		transition: 0.3s ease-in-out;
+		&:after{
+			position: absolute;
+			content: '';
+			right: 0px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 20px;
+			height: 11px;
+			background: {
+				image: url('../img/icons/caret-right.svg');
+				repeat: no-repeat;
+				size: contain;
+			}
+			transition: 0.3s ease-in-out;
+		}
+		&:hover:after{ 
+			right: 10px;
+			transform: translateY(-50%) rotate(180deg) translateX(5px);
+			transform-origin: center center;
+			@include mobile(){
+				right: 0px;
+				transform: translateY(-50%); 
+			}
+		}
+		&:hover{
+			padding-left: 10px;
+			text-decoration: none;
+			@include mobile(){
+				padding-left: 0px;
+			}
+		}
+	}
+	&.dark{
+		> a:hover{
+			color: color('primary');
+		}
+		> a:after{
+			background: {
+				image: url('../img/icons/caret-right-dark.svg');
+				repeat: no-repeat;
+				size: contain;
+			}
+		}
+	}
+}
+
+// Gradients
+.gradient-1 { 
+	background: linear-gradient(to right, #155E63 0%, #8E56C6 100%);
+	background-clip: text;
+	fill: transparent;
+}
+.gradient-2 { 
+	background: linear-gradient(to right, #045D63 0%, #C67156 100%);
+	background-clip: text;
+	fill: transparent;
+}
+.gradient-3 { 
+	background: linear-gradient(to right, #045D63 0%, #00C0C0 100%);
+	background-clip: text;
+	fill: transparent;
+}
+.gradient-4 { 
+	background: linear-gradient(to right, #7A00C0 0%, #045D63 100%);
+	background-clip: text;
+	fill: transparent;
+}

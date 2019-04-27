@@ -1,0 +1,94 @@
+.full-window-height {
+  min-height: 900px;
+  /* ONLY if you want the video to fill the entire browser window. Support: http://caniuse.com/#search=vh */
+  max-height: 950px;
+  @media (max-height: 1400px){
+    max-height: calc(100vh - 90px); 
+  }
+   @media (max-width: 1200px){
+    min-height: 350px; 
+  }
+}
+.video-bg {
+  position: relative; /* contain the abs-pos <video> */
+  width: 100%;
+  overflow: hidden; /* prevent scrollbars */
+  /* these below don't matter: */
+  /*padding: 10% 0; */
+  text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding-bottom: rem-calc(90px);
+  ::selection {
+    color: #FFF; 
+    background-color: rgba(#155E63, 0.3);
+  }
+  h1{
+    font-family: $primary_font;
+    color: #FFF;
+    z-index: 101;
+    position: relative;
+    padding-left: rem-calc(10px);
+  }
+  p{
+    @include secondary_font(light);
+    color: #FFF; 
+    opacity: 1;
+    z-index: 101;
+    position: relative;
+    padding-left: rem-calc(10px);
+  }
+}
+.video-div{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  height: 100vh;
+  background-image: url('../img/icons/div.svg');
+}
+.video-filter{
+  pointer-events: none;
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  @media (max-height: 1400px){
+    top: 0px;
+  }
+  @media (max-width: 1200px){
+    top: 0px;
+  }
+  width: 100%;
+  min-height: calc(800px + 90px);
+  height: calc(100vh + 90px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+.video-bg video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* keep centered in parent */
+  z-index: -1; /* keep video behind other content */
+  min-width: 100%; /* always cover horizontal */
+  min-height: 100%; /* always cover vertical */
+}
+
+.learn-more{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; 
+  color: #FFF;
+  z-index: 101;
+  bottom: 50px;
+  &:hover{
+    cursor: pointer;
+  }
+  img{
+    margin-top: 15px;
+  }
+  @include secondary_font(regular); 
+  @include font_size(15px);
+}

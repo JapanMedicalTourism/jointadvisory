@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="linkedin" transform="translate(-637 -9476)">
+    <path id="Path_564" data-name="Path 564" d="M0,0H22V22H0V0Z" transform="translate(637 9476)" fill="#fff" opacity="0"/>
+    <g id="linkedin-2" data-name="linkedin" transform="translate(637 9476)">
+      <path id="Path_40" data-name="Path 40" d="M15.672,8a5.672,5.672,0,0,1,5.672,5.672V20.29H17.563V13.672a1.891,1.891,0,0,0-3.781,0V20.29H10V13.672A5.672,5.672,0,0,1,15.672,8Z" transform="translate(-0.437 -0.328)" fill="none" stroke="#155e63" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <rect id="Rectangle_103" data-name="Rectangle 103" width="3.781" height="11.344" transform="translate(2 8.618)" stroke-width="1" stroke="#155e63" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="1.891" cy="1.891" r="1.891" transform="translate(2 2)" stroke-width="1" stroke="#155e63" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+  </g>
+</svg>

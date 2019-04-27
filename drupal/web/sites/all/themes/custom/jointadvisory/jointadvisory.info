@@ -1,0 +1,4 @@
+name = Joint Advisory
+description = Joint Advisory theme.
+core = 7.x
+engine = phptemplate

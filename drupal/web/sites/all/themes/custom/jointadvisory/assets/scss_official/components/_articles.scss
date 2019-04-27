@@ -1,0 +1,109 @@
+// Article Cards
+.article-wrapper{
+ 	
+}
+
+.article-card{
+	width: 100%;	
+	margin-bottom: 60px;
+}
+
+.article-card__wrapper{
+	
+}
+
+.team-article-card{
+	margin-bottom: 10px;
+}
+
+.article-card__thumbnail{
+	height: 350px;
+	@include tablet(){
+		height: 170px;
+	}
+	background:{
+		size: cover;
+		repeat: no-repeat;
+		position: center center;
+	}
+
+	.expanded-article-card &{
+		position: relative;
+		height: 500px;
+		background-position: center bottom;
+		@include mobile(){
+			height: 300px;
+		}
+	}
+	.recent-article-card &{
+		height: 250px;
+	}
+	.team-article-card &{
+		height: 250px;
+	}
+}
+
+
+
+.article-card__content{
+	min-height: 300px;
+	background-color: #F9F9F9;
+	padding: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	> * {
+		width: 100%;
+	}
+	.link-re{
+		align-self: end;
+		display: inline-block;
+		width: auto;
+	}
+	.team-article-card &{
+		min-height: 150px;
+		.title{
+			@include font-size(30px);
+		}
+		margin-bottom: 50px; 
+	}
+	.service-card &{
+		min-height: 500px;
+		.title{
+			@include font-size(25px);
+		}
+		.description{
+			@include font-size(15px);
+		}
+	}
+	.recent-article-card &{
+		min-height: 200px;
+		background-color: #FFF;
+		padding: 0px 10px;
+		display: block;
+		.title{
+			@include font-size(30px);
+		}
+		@include tablet(){
+			margin-top: 20px;
+		}
+	}
+	.expanded-article-card &{
+		width: calc(100% - 100px);
+		margin-left: 50px;
+		position: relative;
+		margin-top: -50px;
+		background-color: #FFF;
+		padding: 50px 60px;
+		@include mobile(){
+			width: calc(100% - 20px);
+			margin-left: 10px; 
+			padding: 50px 55px;
+		}
+		@include card-shadow-light;
+		.description{
+			line-height: 2;
+		}
+	}
+
+}

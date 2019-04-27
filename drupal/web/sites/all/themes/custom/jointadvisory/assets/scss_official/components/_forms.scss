@@ -1,0 +1,28 @@
+form{
+  label{
+    @include primary_font('regular');
+    margin-top: 15px;
+    @include font-size(17px);
+  }
+
+  .form-control{
+    border: 0px solid transparent;
+    border-bottom: 1px solid gray;
+    min-height: 50px;
+    font-size: 1.2rem;
+    border-radius: 0px;
+  }
+
+  textarea{
+    resize: vertical;
+  }
+
+}
+
+.captcha-wrapper{
+  margin-top: 10px;
+}
+
+.custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid{
+  border-color: color('primary');
+}

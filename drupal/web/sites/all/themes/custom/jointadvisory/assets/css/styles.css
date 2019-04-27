@@ -1,0 +1,63 @@
+/*                                                                                                                       
+                  ,,                                           ,,              ,,                                      
+   `7MMF'         db              mm             db          `7MM              db                                      
+     MM                           MM            ;MM:           MM                                                      
+     MM  ,pW"Wq.`7MM  `7MMpMMMb.mmMMmm         ,V^MM.     ,M""bMM `7M'   `MF'`7MM  ,pP"Ybd  ,pW"Wq.`7Mb,od8 `7M'   `MF'
+     MM 6W'   `Wb MM    MM    MM  MM          ,M  `MM   ,AP    MM   VA   ,V    MM  8I   `" 6W'   `Wb MM' "'   VA   ,V  
+     MM 8M     M8 MM    MM    MM  MM          AbmmmqMA  8MI    MM    VA ,V     MM  `YMMMa. 8M     M8 MM        VA ,V   
+(O)  MM YA.   ,A9 MM    MM    MM  MM         A'     VML `Mb    MM     VVV      MM  L.   I8 YA.   ,A9 MM         VVV    
+ Ymmm9   `Ybmd9'.JMML..JMML  JMML.`Mbmo    .AMA.   .AMMA.`Wbmd"MML.    W     .JMML.M9mmmP'  `Ybmd9'.JMML.       ,V     
+                                                                                                               ,V      
+  Author: DRB (JMT)
+	Author URI: www.jointadvisory.com
+	Desc: Joint Advisory                                                                                                        OOb"       
+ */
+/*  */
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+html, body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-size: 67px;
+  font-size: 4.1875rem;
+}
+
+h2 {
+  font-size: 54px;
+  font-size: 3.375rem;
+}
+
+h3 {
+  font-size: 32px;
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 27px;
+  font-size: 1.6875rem;
+}
+
+h5 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+}
+
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+small {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+p {
+  font-size: 25px;
+  font-size: 1.5625rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

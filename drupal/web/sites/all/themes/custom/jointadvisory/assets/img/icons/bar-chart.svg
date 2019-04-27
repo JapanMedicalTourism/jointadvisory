@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96.827" height="102.26" viewBox="0 0 96.827 102.26">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.493" y1="1.392" x2="-0.078" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#8e56c6"/>
+      <stop offset="1" stop-color="#045d63"/>
+    </linearGradient>
+  </defs>
+  <g id="bar-chart" transform="translate(-13.601)">
+    <g id="Group_128" data-name="Group 128" transform="translate(13.601 29.291)">
+      <g id="Group_127" data-name="Group 127" transform="translate(0)">
+        <path id="Path_48" data-name="Path 48" d="M108.431,215.629H104.05V152.023a5.375,5.375,0,0,0-5.369-5.369H88.89a5.375,5.375,0,0,0-5.369,5.369v63.606H72.4V180.842a5.375,5.375,0,0,0-5.369-5.369H57.237a5.375,5.375,0,0,0-5.369,5.369v34.788H40.745V197.613a5.375,5.375,0,0,0-5.369-5.369H25.584a5.375,5.375,0,0,0-5.369,5.369v18.016H15.6a2,2,0,1,0,0,3.995h92.833a2,2,0,1,0,0-3.995Zm-71.681,0H24.21V197.613a1.376,1.376,0,0,1,1.375-1.375h9.791a1.376,1.376,0,0,1,1.375,1.375v18.016Zm31.653,0H55.862V180.842a1.376,1.376,0,0,1,1.375-1.375h9.791a1.376,1.376,0,0,1,1.375,1.375Zm31.653,0H87.515V152.023a1.376,1.376,0,0,1,1.375-1.375h9.791a1.376,1.376,0,0,1,1.375,1.375Z" transform="translate(-13.601 -146.654)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="Group_130" data-name="Group 130" transform="translate(30.727)">
+      <g id="Group_129" data-name="Group 129" transform="translate(0)">
+        <path id="Path_49" data-name="Path 49" d="M172.665,2.1a1.99,1.99,0,0,0-2.1-2.1c-.032,0-.064,0-.1,0H158.39a2,2,0,1,0,0,3.995h7.461L146.106,23.739l-7.446-7.446a2,2,0,0,0-2.825,0l-35.9,35.9a2,2,0,0,0,2.825,2.824L137.248,20.53l7.446,7.446a2,2,0,0,0,2.825,0L168.676,6.819v6.753a2,2,0,0,0,3.995,0V2.2C172.67,2.164,172.667,2.133,172.665,2.1Z" transform="translate(-99.346)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+    <g id="Group_132" data-name="Group 132" transform="translate(23.995 58.582)">
+      <g id="Group_131" data-name="Group 131">
+        <circle id="Ellipse_10" data-name="Ellipse 10" cx="1.997" cy="1.997" r="1.997" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>
