@@ -1,3 +1,7 @@
+<?php
+    include("page-header.php");
+    echo render($page['content']['metatags'])
+?>
  <section id="video-banner">
         <div class="full-window-height video-bg">
             <div class="video-filter"></div>
@@ -329,3 +333,9 @@
             </div>
         </div>
     </section>
+<?php
+    include("page-footer.php");
+
+    include("page-script.php");
+    include("page-close-tag.php");
+?>

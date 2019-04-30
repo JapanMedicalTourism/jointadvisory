@@ -106,8 +106,8 @@
 
                             </div>
                             <div class="container-fluid">
-                                <a class="navbar-brand" href="./index.html">
-                                    <img src="<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/logo.png" height="60" class="d-inline-block align-top" alt="">
+                                <a class="navbar-brand" href="<?php echo base_path(); ?>">
+                                    <img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/logo.png" height="60" class="d-inline-block align-top" alt="">
                                 </a>
                                 <div class="collapse navbar-collapse" id="ja-navbar-contents">
                                     <ul class="navbar-nav ml-auto">
@@ -238,7 +238,7 @@
                                             <a class="nav-link dropdown-toggle" href="" id="about-megamenu" data-toggle="dropdown"
                                             aria-haspopup="true"
                                             aria-expanded="false"><img
-                                            src="<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/search.svg" alt="Search Joint Advisory" width="20px"></a>
+                                            src="<?php echo base_path() . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/search.svg" alt="Search Joint Advisory" width="20px"></a>
                                             <div class="dropdown-menu megamenu" aria-labelledby="about-megamenu">
                                                 <div class="container-fluid container-megamenu">
                                                     <div class="row">
