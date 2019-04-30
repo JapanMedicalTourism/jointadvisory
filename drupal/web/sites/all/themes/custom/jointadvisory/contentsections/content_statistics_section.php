@@ -1,7 +1,7 @@
 <?php  
     $title = $para_banner['#entity']->field_title['und'][0]['value'];
 
-
+    $para_banner_arr2 = array();
     if (isset($para_banner['#entity']->field_statistics_items['und'])) {
         foreach ($para_banner['#entity']->field_statistics_items['und'] as $para2) {
             $para_banner_arr2[] = $para2['value'];

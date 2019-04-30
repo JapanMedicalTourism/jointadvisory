@@ -4,7 +4,8 @@
 
 <section id="fixed-banner" class="fixed-banner" style="background-image: url(<?php echo $banner_image ?>);"></section>
 
-<?php  
+<?php 
+	$para_banner_arr = array();
 	if (isset($node->field_body['und'])) {
         foreach ($node->field_body['und'] as $para) {
             $para_banner_arr[] = $para['value'];
