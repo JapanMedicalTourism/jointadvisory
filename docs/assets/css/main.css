@@ -77,18 +77,15 @@ a:hover {
   content: attr(data-content) " ";
   display: inline-block;
   -webkit-transform: translateY(0%);
-          -ms-transform: translateY(0%);
-      transform: translateY(0%);
+          transform: translateY(0%);
   -webkit-transition: -webkit-transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: -webkit-transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -o-transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .splitText__word--idle:before {
   -webkit-transform: translateY(100%);
-          -ms-transform: translateY(100%);
-      transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .breadcrumb {
@@ -111,7 +108,6 @@ a:hover {
   -webkit-box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
           box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .card__shadow--light:hover {
@@ -266,7 +262,6 @@ p {
   font-size: 15px;
   font-size: 0.9375rem;
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   text-transform: uppercase;
 }
@@ -325,7 +320,6 @@ p {
   z-index: 50;
   background-color: rgba(21, 94, 99, 0.1);
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .styled-links.dark a:not(.link-re):hover {
@@ -348,8 +342,7 @@ p {
   right: 0px;
   top: 51%;
   -webkit-transform: translateY(-45%);
-          -ms-transform: translateY(-45%);
-      transform: translateY(-45%);
+          transform: translateY(-45%);
   width: 30px;
   height: 30px;
   background-image: url("../img/icons/arrow-left-grn.svg");
@@ -393,7 +386,6 @@ p {
   position: relative;
   padding-right: 20px;
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .vertical-link-list > a:after {
@@ -402,32 +394,27 @@ p {
   right: 0px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 20px;
   height: 11px;
   background-image: url("../img/icons/caret-right.svg");
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .vertical-link-list > a:hover:after {
   right: 10px;
   -webkit-transform: translateY(-50%) rotate(180deg) translateX(5px);
-          -ms-transform: translateY(-50%) rotate(180deg) translateX(5px);
-      transform: translateY(-50%) rotate(180deg) translateX(5px);
+          transform: translateY(-50%) rotate(180deg) translateX(5px);
   -webkit-transform-origin: center center;
-          -ms-transform-origin: center center;
-      transform-origin: center center;
+          transform-origin: center center;
 }
 @media (max-width: 660px) {
   .vertical-link-list > a:hover:after {
     right: 0px;
     -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 }
 .vertical-link-list > a:hover {
@@ -450,42 +437,30 @@ p {
 
 .gradient-1 {
   background: -webkit-gradient(linear, left top, right top, from(#155E63), to(#8E56C6));
-  background: -webkit-linear-gradient(left, #155E63 0%, #8E56C6 100%);
-  background: -o-linear-gradient(left, #155E63 0%, #8E56C6 100%);
   background: linear-gradient(to right, #155E63 0%, #8E56C6 100%);
   -webkit-background-clip: text;
-          background-clip: text;
-  fill: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .gradient-2 {
   background: -webkit-gradient(linear, left top, right top, from(#045D63), to(#C67156));
-  background: -webkit-linear-gradient(left, #045D63 0%, #C67156 100%);
-  background: -o-linear-gradient(left, #045D63 0%, #C67156 100%);
   background: linear-gradient(to right, #045D63 0%, #C67156 100%);
   -webkit-background-clip: text;
-          background-clip: text;
-  fill: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .gradient-3 {
   background: -webkit-gradient(linear, left top, right top, from(#045D63), to(#00C0C0));
-  background: -webkit-linear-gradient(left, #045D63 0%, #00C0C0 100%);
-  background: -o-linear-gradient(left, #045D63 0%, #00C0C0 100%);
   background: linear-gradient(to right, #045D63 0%, #00C0C0 100%);
   -webkit-background-clip: text;
-          background-clip: text;
-  fill: transparent;
+  -webkit-text-fill-color: transparent; 
 }
 
 .gradient-4 {
   background: -webkit-gradient(linear, left top, right top, from(#7A00C0), to(#045D63));
-  background: -webkit-linear-gradient(left, #7A00C0 0%, #045D63 100%);
-  background: -o-linear-gradient(left, #7A00C0 0%, #045D63 100%);
   background: linear-gradient(to right, #7A00C0 0%, #045D63 100%);
   -webkit-background-clip: text;
-          background-clip: text;
-  fill: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar {
@@ -573,7 +548,6 @@ body {
   -webkit-box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
           box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   display: none;
@@ -595,8 +569,7 @@ body {
 
 .sidebar.open {
   -webkit-transform: translateX(-320px);
-          -ms-transform: translateX(-320px);
-      transform: translateX(-320px);
+          transform: translateX(-320px);
 }
 
 .nav-sidebar {
@@ -630,16 +603,14 @@ body {
 .hamburglar {
   display: none;
   -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-      transform: scale(1);
+          transform: scale(1);
   position: fixed;
   width: 68px;
   height: 68px;
   top: 10px;
   right: 10px;
   -webkit-transform: scale(0.7);
-          -ms-transform: scale(0.7);
-      transform: scale(0.7);
+          transform: scale(0.7);
   background: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -677,11 +648,9 @@ body {
   width: 34px;
   margin: 34px 34px 0 0;
   -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-      transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transform-origin: 100% 0;
-          -ms-transform-origin: 100% 0;
-      transform-origin: 100% 0;
+          transform-origin: 100% 0;
 }
 .path-rotation:before {
   content: '';
@@ -857,15 +826,13 @@ body {
 .burger-bun-top {
   top: 0;
   -webkit-transform-origin: 34px 2px;
-          -ms-transform-origin: 34px 2px;
-      transform-origin: 34px 2px;
+          transform-origin: 34px 2px;
 }
 
 .burger-bun-bot {
   bottom: 0;
   -webkit-transform-origin: 34px 2px;
-          -ms-transform-origin: 34px 2px;
-      transform-origin: 34px 2px;
+          transform-origin: 34px 2px;
 }
 
 .burger-filling {
@@ -1297,8 +1264,7 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   /* keep centered in parent */
   z-index: -1;
   /* keep video behind other content */
@@ -1312,8 +1278,7 @@ body {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+          transform: translateX(-50%);
   text-align: center;
   color: #FFF;
   z-index: 101;
@@ -1415,11 +1380,9 @@ form textarea {
   background-color: #155E63;
   border-color: #155E63;
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   -webkit-transform: translateY(3px);
-          -ms-transform: translateY(3px);
-      transform: translateY(3px);
+          transform: translateY(3px);
   -webkit-box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
           box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
   transition: 0.3s ease-in-out;
@@ -1434,8 +1397,7 @@ form textarea {
   -webkit-box-shadow: -1px 6px 20px 0px #114a4e66;
           box-shadow: -1px 6px 20px 0px #114a4e66;
   -webkit-transform: translateY(0px);
-          -ms-transform: translateY(0px);
-      transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 /* Override modal */
@@ -1461,8 +1423,7 @@ form textarea {
 
 .request-quote-form {
   -webkit-transform: scale(0.8) translate(-45px, -90px);
-          -ms-transform: scale(0.8) translate(-45px, -90px);
-      transform: scale(0.8) translate(-45px, -90px);
+          transform: scale(0.8) translate(-45px, -90px);
 }
 
 .featured-banner {
@@ -1607,7 +1568,6 @@ form textarea {
   width: 100%;
   margin-bottom: 10px;
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   background-size: cover;
   background-position: 30% center;
@@ -1633,7 +1593,6 @@ form textarea {
   -webkit-box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
           box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 .news-card .thumbnail:hover:hover {
@@ -1738,7 +1697,6 @@ form textarea {
 }
 .article-card__content .link-re {
   -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
       align-self: end;
   display: inline-block;
   width: auto;
@@ -1787,7 +1745,6 @@ form textarea {
   -webkit-box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
           box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
   -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 @media (max-width: 660px) {
