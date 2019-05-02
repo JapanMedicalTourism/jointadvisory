@@ -1162,6 +1162,11 @@ body {
     left: 36px;
   }
 }
+.logged-in .navbar {
+  position: absolute;
+  top: unset;
+}
+
 .full-window-height {
   min-height: 900px;
   /* ONLY if you want the video to fill the entire browser window. Support: http://caniuse.com/#search=vh */
