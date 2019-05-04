@@ -12,7 +12,6 @@
         }
     }
 
-
 	$banner_entities = entity_load('paragraphs_item', $para_banner_arr);
 	$paragraphs_banner_render = entity_view('paragraphs_item', $banner_entities, false);
 
