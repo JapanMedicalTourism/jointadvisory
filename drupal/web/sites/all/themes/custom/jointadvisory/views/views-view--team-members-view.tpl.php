@@ -4,6 +4,10 @@
             <div class="row article-row">
                 <?php print $rows; ?>
             </div>
+
+            <?php if ($pager): ?>
+		    	<?php print $pager; ?>
+		  	<?php endif; ?>
         </div>
     </div>
 </section>
