@@ -24,4 +24,16 @@
 	function jointadvisory_js_alter(&$javascript) {
 		$javascript['misc/jquery.js']['data'] = drupal_get_path('theme', 'jointadvisory') . '/assets/js/core/jquery-3.3.1.min.js';
 	}
+
+	function jointadvisory_preprocess_node(&$variables) {
+
+	 	foreach (system_region_list($GLOBALS['theme']) as $region_key => $region_name) {
+
+		    if ($blocks = block_get_blocks_by_region($region_key)) {
+		      	$variables['region'][$region_key] = $blocks;
+		    }else {
+		      	$variables['region'][$region_key] = array();
+		    }
+	  	}
+	}
 ?>

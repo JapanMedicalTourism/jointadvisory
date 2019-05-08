@@ -14,13 +14,15 @@
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
                             <li class="breadcrumb-item"><a href="./about-us.html">Services</a></li>
-                            <li class="breadcrumb-item"><a href="./the-team.html"><?php echo $term->name; ?></a></li>
                             <li class="breadcrumb-item active" aria-current="page"><?php echo $node->title; ?></li>
                         </ol>
                     </nav>
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class=" article-content"><br> 
+                        <div class="category dark styled-links">
+                            <a><?php echo $term->name; ?></a>
+                        </div>
                         <div class="title">
                             <?php echo $title; ?>
                         </div>

@@ -2,3 +2,6 @@ name = Joint Advisory
 description = Joint Advisory theme.
 core = 7.x
 engine = phptemplate
+
+regions[bottom_page]  = Bottom Page
+regions[content]  = Content

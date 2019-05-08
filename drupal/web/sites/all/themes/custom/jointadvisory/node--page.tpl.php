@@ -20,4 +20,6 @@
 			include(drupal_get_path('theme', 'jointadvisory') . '/contentsections/' . $para_banner['#entity']->bundle . '.php');
 		}
 	}
+
+	print render($region['bottom_page']);
 ?>
