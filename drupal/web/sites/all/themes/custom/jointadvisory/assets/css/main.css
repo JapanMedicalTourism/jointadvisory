@@ -1982,3 +1982,31 @@ footer .sub-content .vertical-link-list a img {
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+footer .sub-content .vertical-link-list .region-language-switcher ul li a {
+  font-size: 15px;
+  font-size: 0.9375rem;
+}
+
+.vertical-link-list .region-language-switcher ul{
+  list-style: none
+}
+
+.vertical-link-list.dark .region-language-switcher ul li > a:hover {
+  color: #155E63;
+}
+
+.vertical-link-list .region-language-switcher ul li > a:hover {
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.vertical-link-list .region-language-switcher ul li > a {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
+  padding-right: 20px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}

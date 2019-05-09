@@ -5,3 +5,4 @@ engine = phptemplate
 
 regions[bottom_page]  = Bottom Page
 regions[content]  = Content
+regions[language_switcher]  = Language Switcher

@@ -6,7 +6,7 @@
                         <div class="article-content styled-links dark">
                             <a><span class="category">JMT Joint Advisory | Where Ideas Begin</span></a>
                         </div>
-                        <img src="<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/footer-logo.png" height="60px" alt="">
+                        <img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/footer-logo.png" height="60px" alt="">
                         <small class="styled-links dark">
                             No part of this publication may be reproduced, stored in a retrieval system, used in a
                             spreadsheet, or transmitted in any form or by any means—electronic, mechanical,
@@ -65,10 +65,20 @@
                         </div>
                         <!-- Vertical Links -->
                         <div class="vertical-link-list dark">
-                            <a href="#"><img src="<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/facebook.svg" height="25px" alt=""> Facebook</a>
-                            <a href="#"><img src="<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/twitter.svg" height="25px" alt=""> Twitter</a>
-                            <a href="#"><img src="<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/linkedin.svg" height="25px" alt=""> LinkedIn</a>
+                            <a href="#"><img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/facebook.svg" height="25px" alt=""> Facebook</a>
+                            <a href="#"><img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/twitter.svg" height="25px" alt=""> Twitter</a>
+                            <a href="#"><img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/linkedin.svg" height="25px" alt=""> LinkedIn</a>
                         </div>
+
+                        <?php if($page['language_switcher']){ ?>
+                        <div class="article-content styled-links dark">
+                            <a><span class="category">Language</span></a>
+                        </div>
+
+                        <div class="vertical-link-list dark">
+                            <?php print  render($page['language_switcher']); ?>
+                        </div>
+                    <?php } ?>
                     </div>
 
                 </div>
