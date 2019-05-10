@@ -1,10 +1,11 @@
 <?php  
-	$banner_image = file_create_url($node->field_banner['und'][0]['uri']);
+	if(isset($node->field_banner['und'][0]['uri'])){
+		$banner_image = file_create_url($node->field_banner['und'][0]['uri']);
 ?>
-
-<section id="fixed-banner" class="fixed-banner" style="background-image: url(<?php echo $banner_image ?>);"></section>
-
+		<section id="fixed-banner" class="fixed-banner" style="background-image: url(<?php echo $banner_image ?>);"></section>
 <?php 
+	}
+
 	$para_banner_arr = array();
 	if (isset($node->field_body['und'])) {
         foreach ($node->field_body['und'] as $para) {

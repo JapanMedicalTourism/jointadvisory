@@ -1,0 +1,200 @@
+<?php  
+	function ja_interpreter_training_menu(){
+		$items['trainings/codmancommunications-interpreter-training-application-form'] = array(
+			'title' => 'Codman Communications Interpreter Training Application Form',
+		    'page callback' => 'ja_interpreter_training_application_form',
+		    'access callback' => TRUE,
+		    'type' => MENU_CALLBACK,
+		);
+
+		$items['trainings/codmancommunications-interpreter-training-application-form/submit'] = array(
+		    'page callback' => 'ja_interpreter_training_application_form_submit',
+		    'access callback' => TRUE,
+		    'type' => MENU_CALLBACK,
+		);
+
+		$items['trainings/codmancommunications-interpreter-training-application-form/notify'] = array(
+		    'page callback' => 'ja_interpreter_training_application_form_notify',
+		    'access callback' => TRUE,
+		    'type' => MENU_CALLBACK,
+		);
+
+		return $items;
+	}
+
+	function ja_interpreter_training_theme() {
+	  	$hooks['ja_interpreter_training_application_form_output'] = array(		 
+			'path' => drupal_get_path('module', 'ja_interpreter_training') . '/includes',
+			'template' => 'interpretertrainingform',
+		);
+
+		$hooks['ja_interpreter_training_application_form_redirect'] = array(		 
+			'path' => drupal_get_path('module', 'ja_interpreter_training') . '/includes',
+			'template' => 'interpretertrainingformredirect',
+		);
+
+		return $hooks;
+	}
+
+	function ja_interpreter_training_application_form(){
+		$output = theme('ja_interpreter_training_application_form_output');	
+
+		return $output;
+	}
+
+	function ja_interpreter_training_application_form_submit(){
+		global $base_url;
+		$enableSandbox = true;
+
+		 $registration_id = db_insert('ja_training_registration')
+	    	->fields(array(
+	    		'first_name' => $_POST['first_name'],
+	    		'last_name' => $_POST['last_name'],
+	    		'email' => $_POST['email'],
+	    		'contact' => $_POST['contact'],
+	    		'address' => $_POST['address1'],
+	    		'reason' => $_POST['message'],
+	    		'interpreter' => isset($_POST['interpreter']) ? $_POST['interpreter'] : 0,
+	    		'payment_method' => $_POST['payment_method'],
+	    		'status' => 'pending',
+	    		'created' => date('Y-m-d H:i:s'),
+	    		'modified' => date('Y-m-d H:i:s'),
+	    	))->execute();
+
+		// PayPal settings. Change these to your account details and the relevant URLs
+		// for your site.
+		$paypalConfig = [
+		    'email' => 'jointadvisory@gmail.com',
+		    'return_url' => $base_url . '/trainings/codmancommunications-interpreter-training-application-form/success',
+		    'cancel_url' => $base_url . '/trainings/codmancommunications-interpreter-training-application-form/cancelled',
+		    'notify_url' => $base_url . '/trainings/codmancommunications-interpreter-training-application-form/notify?registration_id=' . $registration_id
+		];
+
+		$paypalUrl = $enableSandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 'https://www.paypal.com/cgi-bin/webscr';
+
+	    // Grab the post data so that we can set up the query string for PayPal.
+	    // Ideally we'd use a whitelist here to check nothing is being injected into
+	    // our post data.
+	    $data = [];
+	    foreach ($_POST as $key => $value) {
+	    	if(array_search($key, array('first_name', 'last_name', 'email', 'address1'))){
+	    		$data[$key] = stripslashes($value);	
+	    	}
+	    }
+	    // Set the PayPal account.
+	    $data['business'] = $paypalConfig['email'];
+
+	    // Set the PayPal return addresses.
+	    $data['return'] = stripslashes($paypalConfig['return_url']);
+	    $data['cancel_return'] = stripslashes($paypalConfig['cancel_url']);
+	    $data['notify_url'] = stripslashes($paypalConfig['notify_url']);
+
+	    // Set the details about the product being purchased, including the amount
+	    // and currency so that these aren't overridden by the form data.
+	    $data['currency_code'] = 'JPY';
+
+	    $count = 1;
+	    foreach ($_POST['product'] as $product) {
+	    	db_insert('ja_training_lineitems')
+	    		->fields(array(
+	    			'title' => $product,
+	    			'registration_id' => $registration_id,
+	    		))->execute();
+
+	    	$data['item_number_' . $count] = $count;
+	    	$data['item_name_' . $count] = $product;
+	    	$data['amount_' . $count] = '5000.00';
+	    	$data['quantity_' . $count] = '1';
+	    	$count++;
+	    }
+
+	    // Add any custom fields for the query string.
+	    //$data['custom'] = USERID;
+
+	    // Build the query string from the data.
+	    $queryString = http_build_query($data);
+
+	    $output = theme('ja_interpreter_training_application_form_redirect', array(
+	    	'paypalUrl' => $paypalUrl,
+	    	'data' => $data,
+	    ));	
+
+		return $output;
+	}
+
+	function ja_interpreter_training_application_form_notify(){
+		$contents = file_get_contents('php://input');
+		parse_str($contents, $output);
+		watchdog('ja_training_training', $output['payment_status']);
+
+		if ($output['payment_status'] == 'Completed') {
+		    db_insert('ja_training_payments')
+		    	->fields(array(
+		    		'txnid' => $output['txn_id'],
+		    		'payment_amount' => $output['mc_gross'],
+		    		'payment_status' => $output['payment_status'],
+		    		'registration_id' => $_GET['registration_id'],
+		    		'created' => date('Y-m-d H:i:s'),
+		    	))->execute();
+
+		    db_update('ja_training_registration')
+		    	->fields(array(
+		    		'status' => 'complete',
+		    	))->condition('id', $_GET['registration_id'])
+		    	->execute();
+		}
+	}
+
+	function verifyTransaction($data) {
+	    $enableSandbox = true;
+	    $paypalUrl = $enableSandbox ? 'https://www.sandbox.paypal.com/cgi-bin/webscr' : 'https://www.paypal.com/cgi-bin/webscr';
+
+	    $req = 'cmd=_notify-validate';
+	    foreach ($data as $key => $value) {
+	        $value = urlencode(stripslashes($value));
+	        $value = preg_replace('/(.*[^%^0^D])(%0A)(.*)/i', '${1}%0D%0A${3}', $value); // IPN fix
+	        $req .= "&$key=$value";
+	    }
+
+	    $ch = curl_init($paypalUrl);
+	    curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
+	    curl_setopt($ch, CURLOPT_POST, 1);
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	    curl_setopt($ch, CURLOPT_POSTFIELDS, $req);
+	    curl_setopt($ch, CURLOPT_SSLVERSION, 6);
+	    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 1);
+	    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+	    curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);
+	    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
+	    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Connection: Close'));
+	    $res = curl_exec($ch);
+
+	    if (!$res) {
+	        $errno = curl_errno($ch);
+	        $errstr = curl_error($ch);
+	        curl_close($ch);
+	        throw new Exception("cURL error: [$errno] $errstr");
+	    }
+
+	    $info = curl_getinfo($ch);
+
+	    // Check the http response
+	    $httpCode = $info['http_code'];
+	    if ($httpCode != 200) {
+	        throw new Exception("PayPal responded with http code $httpCode");
+	    }
+
+	    curl_close($ch);
+
+	    return $res === 'VERIFIED';
+	}
+
+	function checkTxnid($txnid) {
+	    $result = db_select('ja_training_payments', 'jtp')
+	    	->condition('jtp.txn_id', $txnid)
+	    	->execute()
+	    	->fetchASsoc();
+
+	    return !$results;
+	}
+?>
