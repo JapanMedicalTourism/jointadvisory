@@ -20,7 +20,7 @@
             <div class="description smaller">
                 <?php echo $row->_field_data['nid']['entity']->field_position['und'][0]['value'] ?>
             </div>
-            <a href="<?php echo $base_url . '/' .  $alias; ?>" title="" class="link-re">Read Bio</a>
+            <a href="<?php echo $base_url . '/' .  $alias; ?>" title="" class="link-re"><?php print t('Read Bio'); ?></a>
         </div>
     </div>
 </div>

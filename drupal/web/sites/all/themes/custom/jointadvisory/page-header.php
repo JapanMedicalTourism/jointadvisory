@@ -111,10 +111,56 @@
                                 </a>
                                 <div class="collapse navbar-collapse" id="ja-navbar-contents">
                                     <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-                                        </li>
-                                        <li class="nav-item dropdown megamenu-li">
+                                    <?php  
+                                        $menu = menu_tree_all_data('main-menu');
+                                        foreach ($menu as $key => $link) {
+                                            if(!$link['link']['has_children']){
+                                                echo '<li class="nav-item active">
+                                                    <a class="nav-link" href="'.url(drupal_get_path_alias($link['link']['link_path'])).'">'.$link['link']['link_title'].'</a>
+                                                </li>';
+                                            }else{
+                                                echo '<li class="nav-item dropdown megamenu-li">
+                                                    <a class="nav-link dropdown-toggle" href="" id="megamenu-'.$link['link']['mlid'].'" data-toggle="dropdown"
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false">'.$link['link']['link_title'].'</a>
+                                                    <div class="dropdown-menu megamenu" aria-labelledby="megamenu-'.$link['link']['mlid'].'">
+                                                        <div class="container-fluid container-megamenu">
+                                                            <div class="row">';
+                                                                foreach ($link['below'] as $linklevel2) {
+                                                                    echo '<div class="col-md-4 sub-content">
+                                                                        <div class="article-content styled-links dark">
+                                                                            <a><span class="category">'.$linklevel2['link']['link_title'].'</span></a>
+                                                                        </div>';
+                                                                        if($linklevel2['link']['has_children']){
+                                                                            echo '<div class="vertical-link-list dark">';
+                                                                            foreach ($linklevel2['below'] as $linklevel3) {
+                                                                                $m = menu_fields_load_by_mlid($linklevel3['link']['mlid']);
+                                                                                echo '<a href="'.url(drupal_get_path_alias($linklevel3['link']['link_path'])).'">';
+                                                                                if(isset($m->smalll_link['und'][0]) && $m->smalll_link['und'][0]){
+                                                                                    echo '<small class="text-muted">';
+                                                                                }
+
+                                                                                echo $linklevel3['link']['link_title'];
+
+                                                                                 if(isset($m->smalll_link['und'][0]) && $m->smalll_link['und'][0]){
+                                                                                    echo '</small>';
+                                                                                }
+                                                                                echo '</a>';
+                                                                            }
+                                                                            echo '</div>';
+                                                                        }
+                                                                    echo '</div>';
+                                                                }
+                                                        echo '</div>
+                                                        </div>
+                                                    </div>
+                                                </li>';
+                                            }
+                                            // echo '<pre>'; var_dump($link['link']); echo '</pre>';
+                                            // exit();   
+                                        }
+                                    ?>
+                                        <!-- <li class="nav-item dropdown megamenu-li">
                                             <a class="nav-link dropdown-toggle" href="" id="about-megamenu" data-toggle="dropdown"
                                             aria-haspopup="true"
                                             aria-expanded="false">About</a>
@@ -125,7 +171,6 @@
                                                             <div class="article-content styled-links dark">
                                                                 <a><span class="category">Explore Joint Advisory</span></a>
                                                             </div>
-                                                            <!-- Vertical Links -->
                                                             <div class="vertical-link-list dark">
                                                                 <a href="./about-us.html">About Us</a>
                                                                 <a href="./the-team.html">Meet the Experts</a>
@@ -136,7 +181,6 @@
                                                             <div class="article-content styled-links dark">
                                                                 <a><span class="category">Connect with Us</span></a>
                                                             </div>
-                                                            <!-- Vertical Links -->
                                                             <div class="vertical-link-list dark">
                                                                 <a href="#">Facebook</a>
                                                                 <a href="#">Twitter</a>
@@ -162,8 +206,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li class="nav-item dropdown megamenu-li">
+                                        </li> -->
+                                        <!-- <li class="nav-item dropdown megamenu-li">
                                             <a class="nav-link dropdown-toggle" href="" id="services-megamenu" data-toggle="dropdown"
                                             aria-haspopup="true"
                                             aria-expanded="false">Services</a>
@@ -191,7 +235,6 @@
                                                             <div class="article-content styled-links dark">
                                                                 <a><span class="category">Consulting Services</span></a>
                                                             </div>
-                                                            <!-- Vertical Links -->
                                                             <div class="vertical-link-list dark">
                                                                 <a href="./service-item.html">Initial Survey Preparation Package</a>
                                                                 <a href="./service-item.html">Continuous
@@ -208,7 +251,6 @@
                                                             <div class="article-content styled-links dark">
                                                                 <a><span class="category">Other Offered Services</span></a>
                                                             </div>
-                                                            <!-- Vertical Links -->
                                                             <div class="vertical-link-list dark">
                                                                 <a href="./service-item.html">Baseline
                                                                 Assessment</a>
@@ -232,7 +274,7 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="./contact.html">Contact</a>
-                                        </li>
+                                        </li> -->
 
                                         <li class="nav-item dropdown megamenu-li">
                                             <a class="nav-link dropdown-toggle" href="" id="about-megamenu" data-toggle="dropdown"
