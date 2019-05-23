@@ -78,10 +78,8 @@
 実際に通訳トレーニングに参加される方は、ヘッドフォン付きマイクの使用をお願いします。<br>
 
 Zoomアプリケーションを使用したオンライントレーニングです。インターネット環境が必要となります。Zoomの登録及び使用に関しては事前に習得をお願いします。接続不良による責任は一切負いかねます。
- <a> https://zoom.us</a>
+ <a> https://zoom.us</a> 
 
-教材をGoogleシステムで共有するため、お持ちでない方は、Googleアカウントの作成をお願いします。
-<a> https://support.google.com/accounts/answer/27441?hl=ja</a>
  
 入金後の返金は受け付けておりませんのでご了承ください。
 
@@ -107,7 +105,7 @@ Zoomアプリケーションを使用したオンライントレーニングで�
                             
                            
                             <p data-aos="fade-up">
-                               トレーニング開催日の２週間前までに使用する教材をCalssroomのシステムへアップロードします。申込及び支払期限、アップロード完了日は各トレーニング開催日の２週間前の金曜日になります。
+                               トレーニング開催日の２週間前までに使用する教材をEmailで配信します。申込及び支払期限は各トレーニング開催日の２週間前の金曜日になります。
                                
                                  <img src="<?php echo base_path() . '/' . drupal_get_path('module', 'ja_interpreter_training'); ?>/images/communication.png" style="width:97%;height:97%;">
 
@@ -216,8 +214,7 @@ Zoomアプリケーションを使用したオンライントレーニングで�
                                     </div>
                                 </div> -->
                                  <div class="col-md-12 mb-3" data-aos="fade-up" data-aos-delay="200">
-                                   <label for="">選択されたトレーニングの合計金額の請求がいきます。入金後の返金は受付けておりませんので、その都度申込・お支払希望の方は、お手数ですが、分割してお申込ください。 We will issue the invoice with total amount. We won't refund after your payment. Please separate your apply in case you want to pay separately.<br><br><a>参加トレーニングを選択してください Choose Training</a><br>トレーニングの詳細はこちら Check the seminar details here -> <u><a href="<?php echo base_path() . '/' . drupal_get_path('module', 'ja_interpreter_training'); ?>/pdf/CC_training_program_2019.pdf" target="_blank">と詳細 Full Seminar Details</a></u><br>各トレーニング5,400円 Each seminar cost <a>5,400yen</a>
-                                    
+                                   <label for="">選択されたトレーニングの合計金額の請求がいきます。入金後の返金は受付けておりませんので、その都度申込・お支払希望の方は、お手数ですが、分割してお申込ください。 We will issue the invoice with total amount. We won't refund after your payment. Please separate your apply in case you want to pay separately.<br><br><a>参加トレーニングを選択してください Choose Training</a><br>トレーニングの詳細はこちら Check the seminar details here -> <u><a href="<?php echo base_path() . '/' . drupal_get_path('module', 'ja_interpreter_training'); ?>/pdf/Interpreter_training_program_2019_revised.pdf" target="_blank">と詳細 Full Seminar Details</a></u><br>各トレーニング5,400円 Each seminar cost <a>5,400yen</a> 
                                    </label>
                                 </div>
                                  <div class="" data-aos="fade-up" data-aos-delay="200" style="font-size: 12px !important;">
