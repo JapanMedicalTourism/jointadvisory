@@ -1,4 +1,4 @@
-<footer>
+<footer <?php if(isset($_GET['q']) && ($_GET['q'] == 'trainings/codmancommunications-interpreter-training-application-form' || $_GET['q'] == 'node/43' || $_GET['q'] == 'node/44')){ echo 'style="display: none;"'; } ?>>
         <div class="footer-wrapper">
             <div class="container-fluid indent-section">
                 <div class="row">

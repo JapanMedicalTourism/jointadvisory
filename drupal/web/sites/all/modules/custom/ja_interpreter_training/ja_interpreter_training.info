@@ -1,3 +1,6 @@
 name = Joint Advisory Interpreter Training
 description = Page for Joint Advisory Interpreter Training registration
 core = 7.x
+package = JA Trainings
+
+files[] = includes/ja_interpreter_training.class.inc

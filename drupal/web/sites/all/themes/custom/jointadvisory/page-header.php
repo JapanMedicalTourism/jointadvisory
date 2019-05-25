@@ -106,11 +106,11 @@
 
                             </div>
                             <div class="container-fluid">
-                                <a class="navbar-brand" href="<?php echo base_path(); ?>">
+                                <a class="navbar-brand" href="/">
                                     <img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/logo.png" height="60" class="d-inline-block align-top" alt="">
                                 </a>
                                 <div class="collapse navbar-collapse" id="ja-navbar-contents">
-                                    <ul class="navbar-nav ml-auto">
+                                    <ul class="navbar-nav ml-auto" <?php if(isset($_GET['q']) && ($_GET['q'] == 'trainings/codmancommunications-interpreter-training-application-form' || $_GET['q'] == 'node/43' || $_GET['q'] == 'node/44')){ echo 'style="display: none;"'; } ?>>
                                     <?php  
                                         $menu = menu_tree_all_data('main-menu');
                                         foreach ($menu as $key => $link) {

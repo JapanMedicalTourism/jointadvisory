@@ -1,0 +1,9 @@
+<?php
+	function cognita_custom_enable(){
+		variable_set('mail_system', array('default-system' => 'JAInterpreterTrainingMailSystem'));
+	}
+
+	function cognita_custom_disable(){
+		variable_set('mail_system', array('default-system' => 'DrupalPHPMailer'));
+	}
+?>	

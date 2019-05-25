@@ -55,6 +55,7 @@
 	    		'reason' => $_POST['message'],
 	    		'interpreter' => isset($_POST['interpreter']) ? $_POST['interpreter'] : 0,
 	    		'payment_method' => $_POST['payment_method'],
+	    		'participation_type' => $_POST['participation_type'],
 	    		'status' => 'pending',
 	    		'created' => date('Y-m-d H:i:s'),
 	    		'modified' => date('Y-m-d H:i:s'),
@@ -64,8 +65,8 @@
 			$enableSandbox = true;
 			$paypalConfig = [
 			    'email' => 'jointadvisory@gmail.com',
-			    'return_url' => $base_url . '/trainings/codmancommunications-interpreter-training-application-form/success',
-			    'cancel_url' => $base_url . '/trainings/codmancommunications-interpreter-training-application-form/cancelled',
+			    'return_url' => 'http://jointadvisory.com/trainings/codmancommunications-interpreter-training-application-form/success',
+			    'cancel_url' => 'http://jointadvisory.com/trainings/codmancommunications-interpreter-training-application-form/cancelled',
 			    'notify_url' => $base_url . '/trainings/codmancommunications-interpreter-training-application-form/notify?registration_id=' . $registration_id
 			];
 
@@ -102,7 +103,7 @@
 
 		    	$data['item_number_' . $count] = $count;
 		    	$data['item_name_' . $count] = $product;
-		    	$data['amount_' . $count] = '5000.00';
+		    	$data['amount_' . $count] = '5400.00';
 		    	$data['quantity_' . $count] = '1';
 		    	$count++;
 		    }
@@ -128,6 +129,7 @@
 		    		))->execute();
 		    }
 
+		    _send_bank_transfer_details($_POST['email']);
 		    drupal_goto('trainings/codmancommunications-interpreter-training-application-form/success');
 		}
 	}
@@ -152,6 +154,130 @@
 		    		'status' => 'complete',
 		    	))->condition('id', $_GET['registration_id'])
 		    	->execute();
+
+		    _send_confirmation_email($_GET['registration_id']);
 		}
+	}
+
+	function _send_bank_transfer_details($email){
+		$message = '<p>この度は「第５弾全１２回医学英語＋JCI用語通訳オンライントレーニング　ベーシック」に<br />
+			お申し込みいただき、誠にありがとうございます。<br />
+			トレーニング料金の支払いが完了した後に<br />
+			トレーニング参加のご案内メールを差し上げます。</p>
+
+			<p>銀行振込ご希望の方は、下記へ期日（トレーニング開催日の２週間前の金曜日）までにお振り込みください。（１講<br />
+			座：5,400円</p>
+
+			<p>銀行名：ゆうちょ銀行<br />
+			支店名：０１８（ゼロイチハチ）<br />
+			種類：普通預金<br />
+			口座番号：9296173<br />
+			口座名義：ジャパンメディカルツーリズム株式会社</p>
+
+			<p>ご注意；お振込み名義人が申込者と異なる場合には、ai.kuruma@japanmedicaltoruism.comまでご連絡ください。<br />
+			振込いただいた翌週にトレーニング参加のご案内メールを送信いたします。</p>';
+
+			$params['message'] = $message;
+			$params['subject'] = 'Bank Details - Codman Communications Interpreter Training';
+			$mail = drupal_mail('ja_interpreter_training', 'banktransfer', $email, NULL, $params);
+	}
+
+	function _send_confirmation_email($registration_id){
+		$registration = db_select('ja_training_registration', 'jtr')
+			->fields('jtr')
+			->condition('id', $registration_id)
+			->execute()
+			->fetchAssoc();
+
+		$topics = db_select('ja_training_lineitems', 'jtl')
+			->fields('jtl')
+			->condition('registration_id', $registration_id)
+			->execute()
+			->fetchAll();
+
+		$message = '<p>お支払いありがとうございました。入金を確認しました。<br />
+			Zoom のURLをお知らせします。</p>';
+
+		foreach ($topics as $topic) {
+			switch ($topic->title) {
+				case '健診・検診Health check-up and medical examinations - 国際患者安全目標   IPSG （6/27/2019)':
+					$zoom_url = 'https://zoom.us/j/617999132';
+					// $classroom_code = 'ufbwg';
+					break;
+
+				case '呼吸器科Pneumonology - ケアの継続性・患者のアセスメント ACC/AOP (7/11/2019)':
+					$zoom_url = 'https://zoom.us/j/713006773';
+					// $classroom_code = 'zgswwq';
+					break;
+
+				case '循環器科Cardiology - 患者と家族の権利・教育  PFR/PFE（7/25/2019)':
+					$zoom_url = 'https://zoom.us/j/333369911';
+					// $classroom_code = 'aaxvfn';
+					break;
+
+				case '消化器科Gastroenterology - 患者のケア COP 05（8/8/2019)':
+					$zoom_url = 'https://zoom.us/j/325912715';
+					// $classroom_code = 'tsqhhh';
+					break;
+
+				case '血液科Hematology, 内分泌代謝科Endocrinology and metabolism - 鎮静・麻酔・外科手術 ASC（9/12/2019)':
+					$zoom_url = 'https://zoom.us/j/878253774';
+					// $classroom_code = 'jre0w4';
+					break;
+
+				case '脳神経外科Neurosurgery - 感染管理  PCI（9/26/2019)':
+					$zoom_url = 'https://zoom.us/j/927674046';
+					// $classroom_code = '3jk5e2z';
+					break;
+
+				case '放射線治療Radiotherapy - 薬剤の使用と管理  MMU（10/10/2019)':
+					$zoom_url = 'https://zoom.us/j/357278360';
+					// $classroom_code = 'r1w25om';
+					break;
+
+				case '産婦人科 Obstetrics And gynecology - 医療の質管理とガバナンス QPS/GLD（10/24/2019)':
+					$zoom_url = 'https://zoom.us/j/468459903';
+					// $classroom_code = 'gbnolt';
+					break;
+
+				case '皮膚科Dermatology, 眼科Ophthalmology - 施設管理と安全 FMS（11/7/2019)':
+					$zoom_url = 'https://zoom.us/j/471413952';
+					// $classroom_code = 'ls7wi77';
+					break;
+
+				case '耳鼻咽喉科Otorhinolaryngology, 歯科Dentistry - 職員の資格と教育 SQE（11/21/2019)':
+					$zoom_url = 'https://zoom.us/j/659608092';
+					// $classroom_code = '5kigqs';
+					break;
+
+				case '形成外科/整形外科 Plastic and reconstructive surgery/Orthopedic surgery - 情報の管理 MOI（12/5/2019)':
+					$zoom_url = 'https://zoom.us/j/954413656';
+					// $classroom_code = '0z0ht9v';
+					break;
+
+				case '泌尿器科Urology - 医学専門教育・ヒト被験者プログラム MPE/HRP（12/19/2019)':
+					$zoom_url = 'https://zoom.us/j/174203155';
+					// $classroom_code = 'y4vt6n';
+					break;
+			}
+
+			$message .= '<p>'.$topic->title.'<br />
+			Zoom（トレーニング当日、こちらからお入りください）: '.$zoom_url.'</p>';
+		}
+
+		$message .= '<p>教材はトレーニング日の２週間前の金曜日までにEmailにてお送りします。</p>';
+
+		$params['message'] = $message;
+		$params['subject'] = 'Thank you for your payment - Codman Communications Interpreter Training';
+		$mail = drupal_mail('ja_interpreter_training', 'banktransfer', $registration['email'], NULL, $params);
+	}
+
+	function ja_interpreter_training_mail ($key, &$message, $params) {
+	  switch ($key) {
+	    case 'banktransfer':
+	    	$message['subject'] = $params['subject'];
+	  		$message['body'][] = $params['message'];
+	      	break;
+	  }
 	}
 ?>

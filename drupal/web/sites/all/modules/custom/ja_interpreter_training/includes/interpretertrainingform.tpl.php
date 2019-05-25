@@ -226,10 +226,10 @@ Zoomアプリケーションを使用したオンライントレーニングで�
 									  <label><input type="checkbox" name="product[]"  value="呼吸器科Pneumonology - ケアの継続性・患者のアセスメント ACC/AOP (7/11/2019)" > 呼吸器科Pneumonology<br>ケアの継続性・患者のアセスメント ACC/AOP (7/11/2019)</label>
 									</div>
 									<div class="checkbox">
-									  <label><input type="checkbox" name="product[]"  value="Cardiology - 患者と家族の権利・教育  PFR/PFE（7/25/2019)" > 循環器科Cardiology<br>患者と家族の権利・教育	PFR/PFE（7/25/2019)</label>
+									  <label><input type="checkbox" name="product[]"  value="循環器科Cardiology - 患者と家族の権利・教育  PFR/PFE（7/25/2019)" > 循環器科Cardiology<br>患者と家族の権利・教育	PFR/PFE（7/25/2019)</label>
 									</div>
 									<div class="checkbox">
-									  <label><input type="checkbox" name="product[]"  value="Gastroenterology - 患者のケア COP 05（8/8/2019)" > 消化器科Gastroenterology<br>患者のケア COP 05（8/8/2019)
+									  <label><input type="checkbox" name="product[]"  value="消化器科Gastroenterology - 患者のケア COP 05（8/8/2019)" > 消化器科Gastroenterology<br>患者のケア COP 05（8/8/2019)
 									  </label>
 									</div>
 									<div class="checkbox">
@@ -256,7 +256,7 @@ Zoomアプリケーションを使用したオンライントレーニングで�
 									  <label><input type="checkbox" name="product[]"  value="形成外科/整形外科 Plastic and reconstructive surgery/Orthopedic surgery - 情報の管理 MOI（12/5/2019)" > 形成外科/整形外科<br>Plastic and reconstructive surgery/Orthopedic surgery<br>情報の管理 MOI（12/5/2019)</label>
 									</div>
 									<div class="checkbox">
-									  <label><input type="checkbox" name="product[]"  value="泌尿器科Urology - 医学専門教育・ヒト被験者プログラム MPE/HRP（12/19/2019" > 泌尿器科Urology<br>
+									  <label><input type="checkbox" name="product[]"  value="泌尿器科Urology - 医学専門教育・ヒト被験者プログラム MPE/HRP（12/19/2019)" > 泌尿器科Urology<br>
 									  医学専門教育・ヒト被験者プログラム MPE/HRP（12/19/2019)</label>
 									</div> 
                                 </div>
@@ -296,12 +296,12 @@ Zoomアプリケーションを使用したオンライントレーニングで�
                                 </div>
 
                                 <div class="checkbox">
-                                <label>参加形態：いずれかを選択してください。（選択後、変更希望がある場合には、個別でご連絡ください。masa@japanmedicaltourism.com)</label>
-                                <label><input type="checkbox" name=""  value="" >トレーニング参加型（実際にマイクを通して通訳のトレーニングを行います。ヘッドホン付きマイクをご用意ください） </label>
+                                <label><a>参加形態：いずれかを選択してください。（選択後、変更希望がある場合には、個別でご連絡ください。masa@japanmedicaltourism.com)</a></label>
+                                <label><input type="radio" name="participation_type"  value="participating" >トレーニング参加型（実際にマイクを通して通訳のトレーニングを行います。ヘッドホン付きマイクをご用意ください） </label>
                               </div>
 
                                 <div class="checkbox">
-                                <label><input type="checkbox" name=""  value="" >聴講型（他の参加者のトレーニングを聴講するのみ） </label>
+                                <label><input type="radio" name="participation_type"  value="listening" >聴講型（他の参加者のトレーニングを聴講するのみ） </label>
                               </div> 
 
 
