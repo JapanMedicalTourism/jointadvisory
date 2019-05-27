@@ -19,7 +19,27 @@
 		    'type' => MENU_CALLBACK,
 		);
 
+		$items['admin/config/codmancommunications-interpreter-training-application-form'] = array(
+		    'title' => 'Codman Communications Interpreter Training Applicants',
+		    'description' => 'Codman Communications Interpreter Training Applicants',
+		    'page callback' => 'ja_interpreter_training_list',
+		    'page arguments' => array('ja_interpreter_training_list'),
+			'access arguments' =>  array(array('view ja_interpreter_training submissions')),
+		    'file' => 'includes/ja_interpreter_training.list.inc',
+		);
+
 		return $items;
+	}
+
+	function cognita_student_management_permission(){
+		$perms = array(	    
+		    'view ja_interpreter_training submissions' => array(
+		      'title' => t('View Codman Communications Interpreter Training Submissions'), 
+		      'description' => t('View Codman Communications Interpreter Training Submissions'),      
+		    ),
+	  	);
+
+	  	return $perms;
 	}
 
 	function ja_interpreter_training_theme() {
@@ -101,8 +121,70 @@
 		    			'registration_id' => $registration_id,
 		    		))->execute();
 
+		    	switch ($product) {
+					case '健診・検診Health check-up and medical examinations - 国際患者安全目標   IPSG （6/27/2019)':
+						$name = 'Health check-up and medical examinations - IPSG (6/27/2019)';
+						// $classroom_code = 'ufbwg';
+						break;
+
+					case '呼吸器科Pneumonology - ケアの継続性・患者のアセスメント ACC/AOP (7/11/2019)':
+						$name = 'Pneumonology - ACC/AOP (7/11/2019)';
+						// $classroom_code = 'zgswwq';
+						break;
+
+					case '循環器科Cardiology - 患者と家族の権利・教育  PFR/PFE（7/25/2019)':
+						$name = 'Cardiology - PFR/PFE (7/25/2019)';
+						// $classroom_code = 'aaxvfn';
+						break;
+
+					case '消化器科Gastroenterology - 患者のケア COP 05（8/8/2019)':
+						$name = 'Gastroenterology - COP 05 (8/8/2019)';
+						// $classroom_code = 'tsqhhh';
+						break;
+
+					case '血液科Hematology, 内分泌代謝科Endocrinology and metabolism - 鎮静・麻酔・外科手術 ASC（9/12/2019)':
+						$name = 'Hematology, Endocrinology and metabolism - ASC (9/12/2019)';
+						// $classroom_code = 'jre0w4';
+						break;
+
+					case '脳神経外科Neurosurgery - 感染管理  PCI（9/26/2019)':
+						$name = 'Neurosurgery - PCI (9/26/2019)';
+						// $classroom_code = '3jk5e2z';
+						break;
+
+					case '放射線治療Radiotherapy - 薬剤の使用と管理  MMU（10/10/2019)':
+						$name = 'Radiotherapy - MMU (10/10/2019)';
+						// $classroom_code = 'r1w25om';
+						break;
+
+					case '産婦人科 Obstetrics And gynecology - 医療の質管理とガバナンス QPS/GLD（10/24/2019)':
+						$name = 'Obstetrics And gynecology - QPS/GLD (10/24/2019)';
+						// $classroom_code = 'gbnolt';
+						break;
+
+					case '皮膚科Dermatology, 眼科Ophthalmology - 施設管理と安全 FMS（11/7/2019)':
+						$name = 'Dermatology, Ophthalmology - FMS (11/7/2019)';
+						// $classroom_code = 'ls7wi77';
+						break;
+
+					case '耳鼻咽喉科Otorhinolaryngology, 歯科Dentistry - 職員の資格と教育 SQE（11/21/2019)':
+						$name = 'Otorhinolaryngology, Dentistry - SQE (11/21/2019)';
+						// $classroom_code = '5kigqs';
+						break;
+
+					case '形成外科/整形外科 Plastic and reconstructive surgery/Orthopedic surgery - 情報の管理 MOI（12/5/2019)':
+						$name = 'Plastic and reconstructive surgery/Orthopedic surgery - MOI (12/5/2019)';
+						// $classroom_code = '0z0ht9v';
+						break;
+
+					case '泌尿器科Urology - 医学専門教育・ヒト被験者プログラム MPE/HRP（12/19/2019)':
+						$name = 'Urology - MPE/HRP (12/19/2019)';
+						// $classroom_code = 'y4vt6n';
+						break;
+				}
+
 		    	$data['item_number_' . $count] = $count;
-		    	$data['item_name_' . $count] = $product;
+		    	$data['item_name_' . $count] = $name;
 		    	$data['amount_' . $count] = '5400.00';
 		    	$data['quantity_' . $count] = '1';
 		    	$count++;
