@@ -56,4 +56,11 @@
 		$form['pager'] = array('#markup' => theme('pager', array('tags' => array(), 'element' => 0)));
 		return $form;
 	}
+
+	function ja_interpreter_training_view($form, &$form_state, $id){
+		$form['test'] = array(
+			'#type' => 'textfield',
+			'#title' => 'asd',
+		);
+	}
 ?>

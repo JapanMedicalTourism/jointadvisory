@@ -28,6 +28,15 @@
 		    'file' => 'includes/ja_interpreter_training.list.inc',
 		);
 
+		$items['admin/config/codmancommunications-interpreter-training-application-form/%'] = array(
+		    'title' => 'Codman Communications Interpreter Training Applicants',
+		    'description' => 'Codman Communications Interpreter Training Applicants',
+		    'page callback' => 'ja_interpreter_training_view',
+		    'page arguments' => array('ja_interpreter_training_list', 3),
+			'access arguments' =>  array(array('view ja_interpreter_training submissions')),
+		    'file' => 'includes/ja_interpreter_training.list.inc',
+		);
+
 		return $items;
 	}
 
