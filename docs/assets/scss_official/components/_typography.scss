@@ -54,6 +54,9 @@
 	}
 	.title{
 		color: color('primary');
+		&.dark{
+			color: color('dark');
+		}
 		@include primary_font('regular'); 
 		margin-bottom: 10px;
 		@include font-size(25px);

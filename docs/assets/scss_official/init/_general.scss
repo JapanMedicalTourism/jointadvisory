@@ -7,6 +7,7 @@
 // Defaults
 html, body{
 	font-size: $rem_base;
+	overflow-x: hidden;
 	@include secondary_font();
 }
 
@@ -136,5 +137,19 @@ a{
 	}
 }
 
+.form-control{
+	padding-left: 0px;
+}
 
-
+/* Consulting Services */
+.services-banner-img{
+	overflow: hidden;
+	position: absolute;
+	min-height: 300px;
+	img{
+		height: 400px;
+	}
+	@include tablet(){
+		display: none;
+	}
+}

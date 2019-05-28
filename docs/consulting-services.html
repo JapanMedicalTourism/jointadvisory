@@ -29,7 +29,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content=" ./assets/favico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <title>Investment Management Joint Advisory</title>
+    <title>Consulting Services Joint Advisory</title>
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/slick.css" />
@@ -211,7 +211,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item dropdown megamenu-li">
+                    <li class="nav-item active dropdown megamenu-li">
                         <a class="nav-link dropdown-toggle" href="" id="services-megamenu" data-toggle="dropdown"
                            aria-haspopup="true"
                            aria-expanded="false">Services</a>
@@ -276,7 +276,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./investment.html">Investment</a>
+                        <a class="nav-link " href="./investment.html">Investment</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./contact.html">Contact</a>
@@ -322,36 +322,257 @@
             </div>
         </div>
     </nav>
-    <!-- End Navigation -->
-    <!-- Fixed Banner -->
-    <section id="fixed-banner" class="fixed-banner" style="background-image: url('./assets/img/media/investment.png');"></section>
-    <!-- End Fixed Banner -->
+    <!-- End Navigation --> 
     <!-- About -->
     <section id="" class="main-section">
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave wave-up white">
             <path id="banner-wave" d="">
         </svg>
-        <div class="about-wrapper">
+        <div class="register-wrapper">
             <div class="container-fluid indent-section">
                 <div class="row">
                     <div class="col-lg-12">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Investment Management</li>
+                                <li class="breadcrumb-item active" aria-current="page">Consulting Services</li>
                             </ol>
                         </nav>
                     </div>
-                </div>
+                </div> 
                 <div class="row">
-                    <div class="col-lg-12  text-center">
-                        <blockquote class="animatedText about-header">Joint Advisory aims to provide quality health care services by offering the resources and know-how as well as working in partnership with local medical institutions to meet the growing demand in the market.</blockquote>
+                    <div class="col-lg-5 col-md-8">
+                        <div class="article-content styled-links dark">
+                            <h1 class="" data-aos_hidden="fadeUp">Browse our Services</h1>
+                            <p data-aos_hidden="fade-up">
+                                Joint Advisory aims to provide quality health care services by offering the resources and know-how as well as working in partnership with local medical institutions to meet the growing demand in the market.
+                            </p> 
+                        </div>
+                        <form class="needs-validation" novalidate id="register-form" action="search.html" method="GET">
+                            <div class="form-row styled-links dark">
+                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up">
+                                    <label for="validationCustom01"><a>Let's get right to the things you want.</a></label>
+                                    <input type="text" name="search" class="form-control" id="validationCustom01"
+                                           placeholder="Type here and hit enter to search..." list="services" required autocomplete="on">
+                                        <datalist id="services">
+                                            <option value="Initial Survey Preparation  Package">
+                                            <option value="Documentation Package">
+                                            <option value="Continuous Survey Readiness Package"> 
+                                        </datalist> 
+                                    <div class="invalid-feedback">
+                                        Please enter a keyword.
+                                    </div>
+                                </div> 
+                            </div> 
+                        </form>
                     </div>
+                    <div class="col-lg-6 offset-lg-1 col-md-4 ">
+                        <div class="services-banner-img">
+                            <img src="./assets/img/media/services.png" alt="">
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>
     </section>
     <!-- End About Section -->
+
+    <!-- services grid Section -->
+    <section id="" class="main-section">
+        <div class="article-wrapper">
+            <div class="container-fluid indent-section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="article-content">
+                            <h1 class="title dark">Service Packages</h1>
+                            <h1 class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h1>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- 👁 Content LAYOUT TYPE 1 --> 
+                        <div class="row">
+                            <!-- Use type-1 for images with 16:9 ratio and only use lg-4 for low reso-->
+                            <div class="col-lg-4 col-md-6 col-sm-12"> 
+                                <a href="#">
+                                    <div class="service-card type-1 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s1.png');"></div>
+                                        <div class="card-content article-content">
+                                            <h1 class='title'>Initial Survey Preparation Package</h1>
+                                        </div>
+                                    </div>
+                                </a> 
+                            </div> 
+                            <!-- Use type-2 for box ratio 1:1 images -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s2.png');"></div>
+                                        <div class="card-content article-content">
+                                            <h1 class='title'>Continuous
+                                            Survey
+                                            Readiness
+                                            Package</h1>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--  -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s3.png');"></div>
+                                        <div class="card-content article-content">
+                                            <h1 class='title'>Documentation<br> Package</h1>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Images that are 16:9 with decent reso can use longer width column and additional details (description) e.g col-lg-8 with type 2 or type-1 -->
+                            <div class="col-lg-8 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s7.png');"></div>
+                                        <div class="card-content article-content vertical">
+                                            <h1 class='title'>Healthcare
+                                            Consulting
+                                            Systems and
+                                            Services</h1>
+                                            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.   
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--  -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s5.png');"></div>
+                                        <div class="card-content article-content">
+                                            <h1 class='title'>Supply
+                                            Chain
+                                            Management</h1>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div> 
+                        <!-- Content LAYOUT TYPE 1 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End services grid Section -->
+
+
+    <!-- services grid Section -->
+    <section id="" class="main-section">
+        <div class="article-wrapper">
+            <div class="container-fluid indent-section">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="article-content">
+                            <h1 class="title dark">Consulting</h1>
+                            <h1 class="description">Discover our consulting services</h1>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <!-- 👁 Content LAYOUT TYPE 2 -->
+                        <div class="row"> 
+                            <!--  -->
+                            <div class="col-lg-8 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s4.png');"></div>
+                                        <div class="card-content article-content vertical">
+                                            <h1 class='title'>Facility
+                                            Management</h1>
+                                            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--  -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-1 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s8.png');"></div>
+                                        <div class="card-content article-content">
+                                            <h1 class='title'>Safe Design of
+                                                Healthcare
+                                                Facilities</h1>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--  -->
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s11.png');"></div>
+                                        <div class="card-content article-content vertical">
+                                            <h1 class='title'>Focused Medical Record Review</h1> 
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--  -->
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s12.png');"></div>
+                                        <div class="card-content article-content vertical">
+                                            <h1 class='title'>Accreditation Preparation</h1> 
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--  -->
+                            <div class="col-lg-4 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s9.png');"></div>
+                                        <div class="card-content article-content">
+                                            <h1 class='title'>Focused Tracer <br>Process </h1> 
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--  -->
+                            <div class="col-lg-8 col-md-6 col-sm-12">
+                                <a href="#">
+                                    <div class="service-card type-2 card__shadow--light">
+                                        <div class="img-cover" style="background-image: url('./assets/img/media/s10.png');"></div>
+                                        <div class="card-content article-content vertical">
+                                            <h1 class='title'>Mock Survey</h1>
+                                            <p class="description">This service gives you an opportunity to determine your readiness as the actual survey draws near.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div> 
+    
+                        </div>
+                        <!-- Content LAYOUT TYPE 1 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End services grid Section -->
+
+
+
+
+
+
+
+
+
+
     <!-- Expanded Article -->
     <section id="expanded-article-section" class="main-section">
         <div class="article-wrapper">
@@ -364,269 +585,247 @@
                                     <div class="article-card__thumbnail" style="background-image: url('./assets/img/media/about-us.png');"></div>
                                 </a>
                                 <div class="article-card__content article-content">
-                                    <div class="title">
-                                        Investment Management
+                                    <div class="title styled-links dark">
+                                        Joint Advisory's <a>proven successful</a>
+                                        plan for JCI accreditation
                                     </div>
                                     <div class="description styled-links dark">
-                                        A thorough support to healthcare institutions with operations and management
-                                        solutions.
-                                        Joint Advisory provides a thorough support to healthcare institutions with
-                                        operations and management solutions. The following are the specific services that
-                                        we offer.
+                                        Your partner in accreditation success, a proven
+                                        pathway to accreditation. With our 5-step program,
+                                        We guarantee that hospitals and academic centers will
+                                        Guide you to your successful <a></a>JCI accreditation</a>
                                     </div>
+                                    <a href="./pathway.html" title="" class="link-re">Discover the pathway</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
     </section>
     <!-- End Expanded Article -->
-    <section class="main-section">
-        <div class="statistics-wrapper">
-            <div class="container-fluid indent-section flat-top flat-bottom ">
-                <!-- Stats -->
-                <div class="stats-row flat general-stat">
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Business
-                            Planning<br>and
-                            Performance</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Human Affairs<br>Project</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Development
-                            of<br> Human Resources</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Performance<br>
-                            Management</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Asset<br>
-                            Management</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Internal
-                            Control</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Release of<br>
-                            Information</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Sales<br>
-                            Promotion</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Marketing</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Administrative<br>
-                            Negotiation</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Financing</h2>
-                    </div>
-                    <div class="stats-card">
-                        <h2 class="stats-desc smaller">Commercial
-                            Dealing</h2>
-                    </div>
 
 
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Article Grid -->
-    <section id="article-about-section" class="main-section">
-        <div class="article-wrapper">
-            <div class="container-fluid indent-section">
-                <div class="row article-row">
-                    <div class="col-lg-4 col-sm-12 col-xs-12">
-                        <div class=" article-card">
-                            <div class="article-card__wrapper card__shadow--light">
-                                <a href="#">
-                                    <div class="article-card__thumbnail small" style="background-image: url('./assets/img/media/i1.png');"></div>
-                                </a>
-                                <div class="article-card__content article-content">
-                                    <span class="category ">
-                                        SERVICE
-                                    </span>
-                                    <div class="title">
-                                        Standardization of Medical Care
-                                    </div>
-                                    <div class="description">
-                                        Standardization has contributed greatly on healthcare facilities to
-                                        ensuring a good balance between care quality and safety and the
-                                        cost in hospital management.
-                                    </div>
-                                    <a href="./article.html" title="" class="link-re">Learn More</a>
-                                </div>
+        <!-- services grid Section -->
+        <section id="" class="main-section">
+            <div class="article-wrapper">
+                <div class="container-fluid indent-section">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="article-content">
+                                <h1 class="title dark">Other Healthcare Services</h1>
+                                <h1 class="description">Browse our other services</h1>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-xs-12">
-                        <div class=" article-card">
-                            <div class="article-card__wrapper card__shadow--light">
-                                <a href="#">
-                                    <div class="article-card__thumbnail small" style="background-image: url('./assets/img/media/i2.png');"></div>
-                                </a>
-                                <div class="article-card__content article-content">
-                                    <span class="category ">
-                                        SERVICE
-                                    </span>
-                                    <div class="title">
-                                        Training in Japan and Exchange of
-                                        Human resources
-                                    </div>
-                                    <div class="description">
-                                        Joint Advisory connects our overseas partner hospitals with opportunities to have their staff train or have a first hand ...
-                                    </div>
-                                    <a href="./article.html" title="" class="link-re">Learn More</a>
+                        <div class="col-12">
+                            <!-- 👁 Content LAYOUT TYPE 3 -->
+                            <div class="row">
+                                <!--  -->
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-2 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o1.png');"></div>
+                                            <div class="card-content article-content vertical">
+                                                <h1 class='title'>Baseline
+                                                Assessment</h1> 
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-12 col-xs-12">
-                        <div class=" article-card">
-                            <div class="article-card__wrapper card__shadow--light">
-                                <a href="#">
-                                    <div class="article-card__thumbnail small" style="background-image: url('./assets/img/media/i3.png');"></div>
-                                </a>
-                                <div class="article-card__content article-content">
-                                    <span class="category ">
-                                        SERVICE
-                                    </span>
-                                    <div class="title">
-                                        Hospital Planning and Construction Management
-                                    </div>
-                                    <div class="description">
-                                        Joint Advisory partners with investment companies, engineering and architectural firms who have extensive ...
-                                    </div>
-                                    <a href="./article.html" title="" class="link-re">Learn More</a>
+                                <!--  -->
+                                <div class="col-lg-8 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-2 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o2.png');"></div>
+                                            <div class="card-content article-content vertical">
+                                                <h1 class='title'>Care
+                                                Environment
+                                                Assessment</h1>
+                                                <p class="description">Good care environments create a better patient experience. </p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- End Article Grid -->
-    <section id="expanded-article-section_cost-review" class="main-section">
-        <div class="article-wrapper">
-            <div class="container-fluid indent-section flat-bottom flat-top">
-                <div class="row article-row">
-                    <div class="col-md-12">
-                        <div class="expanded-article-card article-card">
-                            <div class="article-card__wrapper">
-                                <a href="#">
-                                    <div class="article-card__thumbnail" style="background-image: url('./assets/img/media/cost-review.png');"></div>
-                                </a>
-                                <div class="article-card__content article-content">
-                                    <div class="title">
-                                        Cost Review
-                                    </div>
-                                    <div class="description styled-links dark">
-                                        Committed to provide you with the science-based, health-focused and quality-centered assistance to protect both your clientele and your organization.
-                                        <br><br>
-                                        Whether you operate from a single or multiple bases, Joint Advisory ensures you hassle-free business costs management. JA helps companies boost profits and reduce unnecessary costs through business ‘health check’.
-                                        <br><br>
-                                        It can be complex when you have to make big business decisions on business expenditures and have inadequate time, knowledge or experience. You may fall into the trap of expensive roll -over renewal contracts that so many companies get tied up by not reading the small print.
-                                    </div>
-                                    <a href="./.html" title="" class="link-re">Learn more about Cost Review</a>
+                                <!--  -->
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-1 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o5.png');"></div>
+                                            <div class="card-content article-content">
+                                                <h1 class='title'>Policy
+                                                    Development &
+                                                    Management</h1>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
+                                <!--  -->
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-2 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o3.png');"></div>
+                                            <div class="card-content article-content vertical">
+                                                <h1 class='title'>Documentation
+                                                Preparation</h1> 
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--  -->
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-2 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o4.png');"></div>
+                                            <div class="card-content article-content vertical">
+                                                <h1 class='title'>Customized
+                                                Survey
+                                                Preparation</h1> 
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div> 
+                                <!--  -->
+                                <div class="col-lg-8 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-2 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o6.png');"></div>
+                                            <div class="card-content article-content vertical">
+                                                <h1 class='title'>Continuous
+                                                Improvement
+                                                Planning</h1>
+                                                <p class="description">JCI Accreditation is a continuous process and they will be conducting visits all throughout the years prior to your re-accreditation.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--  -->
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-2 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o7.png');"></div>
+                                            <div class="card-content article-content vertical">
+                                                <h1 class='title'>Standard
+                                                Training</h1>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--  -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-2 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o9.png');"></div>
+                                            <div class="card-content article-content vertical">
+                                                <h1 class='title'>Survey
+                                                Process
+                                                Training</h1>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!--  -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <a href="#">
+                                        <div class="service-card type-2 card__shadow--light">
+                                            <div class="img-cover" style="background-image: url('./assets/img/media/o8.png');"></div>
+                                            <div class="card-content article-content vertical">
+                                                <h1 class='title'>EMR
+                                                Customization</h1>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+        
                             </div>
+                            <!-- Content LAYOUT TYPE 1 -->
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
+        <!-- End services grid Section -->
 
 
-    <!-- Register Section -->
-    <section id="register-section" class="main-section">
-        <div class="register-wrapper">
-            <div class="container-fluid indent-section">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title full-width register-animate-text">REGISTER YOUR INTEREST</div>
-                    </div>
-                    <div class="col-lg-6">
-                        <!--  -->
-                        <div class="article-content styled-links dark">
-                            <h1 class="register-animate-text" data-aos_hidden="fadeUp">A personalized plan to increase
-                                growth and make your ideas a success.</h1>
-                            <p data-aos_hidden="fade-up">
-                                Would you like to speak to one of our consultants over the phone? Just submit your
-                                details and we’ll be in touch shortly. You can also email us if you would prefer.
-                            </p>
-                            <p data-aos_hidden="fade-up" data-aos_hidden-delay="100">
-                                We inspire clients to make their most challenging business decisions with confidence.
-                                Send us a <a href="#register-form">message</a>, or phone <a href="tel:+81342436050">+81
-                                    3-4243-6050</a> between 10:00 and 18:00 Monday to Friday — we would be delighted to
-                                speak about how we could help your firm.
-                            </p>
+        <!-- Register Section -->
+        <section id="register-section" class="main-section">
+            <div class="register-wrapper">
+                <div class="container-fluid indent-section">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title full-width register-animate-text">REGISTER YOUR INTEREST</div>
                         </div>
-                        <a href="#" title="" class="link-re">For the meantime, browse our brochures</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <!-- Form -->
-                        <form class="needs-validation register-form" novalidate id="register-form">
-                            <div class="form-row styled-links dark">
-                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up">
-                                    <label for="validationCustom01"><a>Full Name / Company</a></label>
-                                    <input type="text" class="form-control" id="validationCustom01"
-                                           placeholder="やまだ たろう / ABC Company" required>
-                                    <div class="invalid-feedback">
-                                        Please enter a name.
-                                    </div>
-                                </div>
-                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="100">
-                                    <label for="validationCustom02"><a>Email Address</a></label>
-                                    <input type="text" class="form-control" id="validationCustom02"
-                                           placeholder="hellothere@domain.com" required>
-                                    <div class="invalid-feedback">
-                                        Please provide us your email address.
-                                    </div>
-                                </div>
-                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="200">
-                                    <label for="validationCustom04"><a>Contact Number</a></label>
-                                    <input type="text" class="form-control" id="validationCustom04"
-                                           placeholder="Your valid contact number" required>
-                                    <div class="invalid-feedback">
-                                        Please provide us a phone number so we can contact you.
-                                    </div>
-                                </div>
-                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="300">
-                                    <label for="validationCustom03"><a>Message</a></label>
-                                    <textarea class="form-control" id="validationCustom03" rows="4" required
-                                              placeholder="Leave us your message and we'll be in touch shortly."></textarea>
-                                    <div class="invalid-feedback">
-                                        Please leave us a message.
-                                    </div>
-                                </div>
+                        <div class="col-lg-6">
+                            <!--  -->
+                            <div class="article-content styled-links dark">
+                                <h1 class="register-animate-text" data-aos_hidden="fadeUp">A personalized plan to increase
+                                    growth and make your ideas a success.</h1>
+                                <p data-aos_hidden="fade-up">
+                                    Would you like to speak to one of our consultants over the phone? Just submit your
+                                    details and we’ll be in touch shortly. You can also email us if you would prefer.
+                                </p>
+                                <p data-aos_hidden="fade-up" data-aos_hidden-delay="100">
+                                    We inspire clients to make their most challenging business decisions with confidence.
+                                    Send us a <a href="#register-form">message</a>, or phone <a href="tel:+81342436050">+81
+                                        3-4243-6050</a> between 10:00 and 18:00 Monday to Friday — we would be delighted to
+                                    speak about how we could help your firm.
+                                </p>
                             </div>
-                            <div class="form-group">
-                                <div class="captcha-wrapper">
-                                    <img src="./assets/img/captcha-placeholder.png" alt="captcha-placeholder"
-                                         height="80px">
+                            <a href="#" title="" class="link-re">For the meantime, browse our brochures</a>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Form -->
+                            <form class="needs-validation register-form" novalidate id="register-form">
+                                <div class="form-row styled-links dark">
+                                    <div class="col-md-12 mb-3" data-aos_hidden="fade-up">
+                                        <label for="validationCustom01"><a>Full Name / Company</a></label>
+                                        <input type="text" class="form-control" id="validationCustom01"
+                                               placeholder="やまだ たろう / ABC Company" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="100">
+                                        <label for="validationCustom02"><a>Email Address</a></label>
+                                        <input type="text" class="form-control" id="validationCustom02"
+                                               placeholder="hellothere@domain.com" required>
+                                        <div class="invalid-feedback">
+                                            Please provide us your email address.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="200">
+                                        <label for="validationCustom04"><a>Contact Number</a></label>
+                                        <input type="text" class="form-control" id="validationCustom04"
+                                               placeholder="Your valid contact number" required>
+                                        <div class="invalid-feedback">
+                                            Please provide us a phone number so we can contact you.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="300">
+                                        <label for="validationCustom03"><a>Message</a></label>
+                                        <textarea class="form-control" id="validationCustom03" rows="4" required
+                                                  placeholder="Leave us your message and we'll be in touch shortly."></textarea>
+                                        <div class="invalid-feedback">
+                                            Please leave us a message.
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div data-aos_hidden="fade-up" data-aos_hidden-delay="400"><button class="btn btn-primary"
-                                        type="submit">Send Details</button></div>
-                        </form>
-                        <!-- End Form -->
+                                <div class="form-group">
+                                    <div class="captcha-wrapper">
+                                        <img src="./assets/img/captcha-placeholder.png" alt="captcha-placeholder"
+                                             height="80px">
+                                    </div>
+                                </div>
+                                <div data-aos_hidden="fade-up" data-aos_hidden-delay="400"><button class="btn btn-primary"
+                                            type="submit">Send Details</button></div>
+                            </form>
+                            <!-- End Form -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End Register Section -->
-
+        </section>
+        <!-- End Register Section -->
     <!-- Footer Section -->
     <footer>
         <div class="footer-wrapper">
