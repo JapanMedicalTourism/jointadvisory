@@ -93,10 +93,10 @@
 	    _send_email_notification($_POST, $registration_id);
 
 		if($_POST['payment_method'] == 'paypal'){
-			$enableSandbox = true;
+			$enableSandbox = false;
 			$paypalConfig = [
-			    // 'email' => 'jmt@japanmedicaltourism.com',
-			    'email' => 'jointadvisory@gmail.com',
+			    'email' => 'jmt@japanmedicaltourism.com',
+			    // 'email' => 'jointadvisory@gmail.com',
 			    'return_url' => 'http://jointadvisory.com/trainings/codmancommunications-interpreter-training-application-form/success',
 			    'cancel_url' => 'http://jointadvisory.com/trainings/codmancommunications-interpreter-training-application-form/cancelled',
 			    'notify_url' => $base_url . '/trainings/codmancommunications-interpreter-training-application-form/notify?registration_id=' . $registration_id
