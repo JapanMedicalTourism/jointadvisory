@@ -23,7 +23,7 @@ html, body{
 
 @media (min-width: 1900px){
 	.container-fluid{
-		max-width: 1920px;
+		max-width: 1620px;
 	}
 }
 
@@ -48,6 +48,12 @@ a{
 	@include desktop(hd){
 		padding-left: rem-calc(20px);
 		padding-right: rem-calc(20px);
+	} 
+	&.flat-top{
+		padding-top: 10px;
+	}
+	&.flat-bottom{
+		padding-bottom: 10px;
 	}
 }
 .main-section{

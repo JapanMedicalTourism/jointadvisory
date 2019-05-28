@@ -49,6 +49,12 @@ a{
 		padding-left: rem-calc(20px);
 		padding-right: rem-calc(20px);
 	}
+	  &.flat-top{
+		padding-top: 0px;
+	}
+	&.flat-bottom{
+		padding-bottom:0px;
+	}
 }
 .main-section{
 	position: relative;

@@ -47,7 +47,8 @@
 		@include secondary_font('semibold');
 		letter-spacing: 2px; 
 		margin-bottom: 10px;
-		@include font-size(15px);
+		line-height: 12px;
+		@include font-size(12px);
 		transition: 0.3s ease-in-out;
 		text-transform: uppercase;
 	}
@@ -55,7 +56,8 @@
 		color: color('primary');
 		@include primary_font('regular'); 
 		margin-bottom: 10px;
-		@include font-size(35px);
+		@include font-size(25px);
+		line-height: 1.2;
 		&.smaller{
 			font-size: rem-calc(18px) !important;
 			margin-bottom: 3px;

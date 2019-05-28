@@ -26,7 +26,7 @@ html, body {
 
 @media (min-width: 1900px) {
   .container-fluid {
-    max-width: 1920px;
+    max-width: 1620px;
   }
 }
 a:hover {
@@ -50,6 +50,12 @@ a:hover {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
+}
+.indent-section.flat-top {
+  padding-top: 10px;
+}
+.indent-section.flat-bottom {
+  padding-bottom: 10px;
 }
 
 .main-section {
@@ -259,8 +265,9 @@ p {
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 10px;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  line-height: 12px;
+  font-size: 12px;
+  font-size: 0.75rem;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   text-transform: uppercase;
@@ -270,8 +277,9 @@ p {
   font-family: "Merriweather", serif;
   font-weight: 400;
   margin-bottom: 10px;
-  font-size: 35px;
-  font-size: 2.1875rem;
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 1.2;
 }
 .article-content .title.smaller {
   font-size: 1.125rem !important;
@@ -1605,6 +1613,8 @@ form textarea {
   font-weight: 400;
   line-height: 1.5;
   padding: 20px 0px;
+  font-size: 34px;
+  font-size: 2.125rem;
 }
 @media (max-width: 660px) {
   .register-wrapper h1 {
@@ -1614,8 +1624,8 @@ form textarea {
 }
 .register-wrapper p {
   color: #53616E;
-  font-size: 23px;
-  font-size: 1.4375rem;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 @media (max-width: 660px) {
   .register-wrapper p {
@@ -1651,14 +1661,20 @@ form textarea {
 }
 
 .article-card__thumbnail {
-  height: 350px;
+  height: 300px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
+.article-card__thumbnail.small {
+  height: 200px;
+}
 @media (max-width: 768px) {
   .article-card__thumbnail {
     height: 170px;
+  }
+  .article-card__thumbnail.small {
+    height: 200px;
   }
 }
 .expanded-article-card .article-card__thumbnail {
@@ -1679,8 +1695,8 @@ form textarea {
 }
 
 .article-card__content {
-  min-height: 300px;
-  background-color: #F9F9F9;
+  min-height: 245px;
+  background-color: #FFF;
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1741,7 +1757,7 @@ form textarea {
   position: relative;
   margin-top: -50px;
   background-color: #FFF;
-  padding: 50px 60px;
+  padding: 50px 50px;
   -webkit-box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
           box-shadow: 0px 6px 14px 0px rgba(33, 37, 41, 0.1019607843);
   -webkit-transition: 0.3s ease-in-out;
@@ -1772,9 +1788,26 @@ form textarea {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+.stats-row.general-stat .stats-card {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-height: 95px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 .statistics-wrapper .stats-row {
   margin-top: 80px;
   margin-bottom: 80px;
+}
+.statistics-wrapper .stats-row.flat {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 @media (max-width: 660px) {
   .statistics-wrapper .stats-row {
@@ -1841,8 +1874,16 @@ form textarea {
   font-size: 40px;
   font-size: 2.5rem;
 }
+.stats-card h2.stats-desc.smaller {
+  font-size: 22px;
+  font-size: 1.375rem;
+}
 @media (max-width: 1130px) {
   .stats-card h2.stats-desc {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  .stats-card h2.stats-desc.smaller {
     font-size: 20px;
     font-size: 1.25rem;
   }
@@ -1852,9 +1893,17 @@ form textarea {
     font-size: 20px;
     font-size: 1.25rem;
   }
+  .stats-card h2.stats-desc.smaller {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
 }
 @media (max-width: 660px) {
   .stats-card h2.stats-desc {
+    font-size: 17px;
+    font-size: 1.0625rem;
+  }
+  .stats-card h2.stats-desc.smaller {
     font-size: 17px;
     font-size: 1.0625rem;
   }
@@ -1891,7 +1940,7 @@ form textarea {
   top: 90px;
   left: 0px;
   width: 100%;
-  height: 700px;
+  height: 500px;
   background-color: #FFF;
   background-position: center center;
   background-size: cover;
@@ -1918,12 +1967,7 @@ form textarea {
   }
 }
 .fixed-banner + * {
-  margin-top: 700px;
-}
-@media (max-width: 1440px) {
-  .fixed-banner + * {
-    margin-top: 500px;
-  }
+  margin-top: 500px;
 }
 @media (max-width: 768px) {
   .fixed-banner + * {

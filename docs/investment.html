@@ -29,7 +29,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content=" ./assets/favico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <title>Joint Advisory</title>
+    <title>Invest in Joint Advisory</title>
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/slick.css" />
@@ -40,11 +40,11 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Page Setup -->
     <script>
-        var page = 'personal';
+        var page = 'about-us';
     </script>
 </head>
 
-<body class="home">
+<body class="inner">
     <!-- Mobile Nav -->
     <div class="sidebar">
         <!--   This section should be at the top -->
@@ -159,10 +159,10 @@
             </a>
             <div class="collapse navbar-collapse" id="ja-navbar-contents">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item ">
                         <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown megamenu-li">
+                    <li class="nav-item active dropdown megamenu-li">
                         <a class="nav-link dropdown-toggle" href="" id="about-megamenu" data-toggle="dropdown"
                            aria-haspopup="true"
                            aria-expanded="false">About</a>
@@ -291,15 +291,12 @@
                             <div class="container-fluid container-megamenu">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <form class="needs-validation" method="GET" novalidate id="search-form"
-                                              action="./search-results.html">
+                                        <form class="needs-validation" method="GET" novalidate id="search-form" action="./search-results.html">
                                             <div class="form-row styled-links dark">
                                                 <div class="col-md-12 mb-3" data-aos_hidden="fade-up">
                                                     <label for="validationCustom01"><a>Search Joint Advisory</a></label>
-                                                    <input type="text" list="keyword" name="search" class="form-control"
-                                                           id="validationCustom01"
-                                                           placeholder="What are you looking for?" required
-                                                           autocomplete="off">
+                                                    <input type="text" list="keyword" name="search" class="form-control" id="validationCustom01"
+                                                           placeholder="What are you looking for?" required autocomplete="off">
                                                     <div class="invalid-feedback">
                                                         Please enter a keyword.
                                                     </div>
@@ -326,260 +323,230 @@
         </div>
     </nav>
     <!-- End Navigation -->
-    <!-- Video Banner -->
-    <section id="video-banner">
-        <div class="full-window-height video-bg">
-            <div class="video-filter"></div>
-            <!-- Video -->
-            <!-- <div class="video-div"></div> -->
-            <video src="./assets/videos/jointadvisory-official-optimized.mp4" preload="auto" autoplay="true"
-                   muted="true" loop="true" controls="false" poster="./assets/videos/poster.jpg"></video>
-            <!-- Content -->
-            <div class="container-fluid indent-section">
-                <div class="row">
-                    <div class="col-lg-8 col-md-12 text-left banner-text">
-                        <h1 class="animated-text banner-title">We turn information into actionable insights</h1>
-                        <p class="animated-text banner-subtext">By offering the resources and know-how as well as
-                            working in partnership with local medical institutions to meet the growing demand in the
-                            market. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="learn-more">
-                <span class="animated-text">Learn More</span><br>
-                <img src="./assets/img/icons/caret-down.svg" alt="Learn More">
-            </div>
-        </div>
-    </section>
-    <!-- End Video Banner -->
-    <!-- Featured -->
-    <section id="featured-section" class="main-section">
+    <!-- Fixed Banner -->
+    <section id="fixed-banner" class="fixed-banner" style="background-image: url('./assets/img/media/investment.png');"></section>
+    <!-- End Fixed Banner -->
+    <!-- About -->
+    <section id="" class="main-section">
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave wave-up white">
             <path id="banner-wave" d="">
         </svg>
-        <div class="featured-wrapper">
+        <div class="about-wrapper">
             <div class="container-fluid indent-section">
                 <div class="row">
-                    <div class="col-lg-8">
-                        <!-- Content -->
-                        <div class="section-title feature-animate-text">Featured</div>
-                        <div class="slick single-item featured-banner featured-slick">
-                            <!-- Loopable divs .slick-holder -->
-                            <div class="slick-holder">
-                                <div class="featured-img"
-                                     style="background-image:url('./assets/img/media/banner2.png')"></div>
-                                <div class="article-content" data-aos_hidden="fade-up">
-                                    <a href="#" class="feature-head" title="Safe Design of Healthcare Facilities">
-                                        <span class="category ">
-                                            CONSULTING SERVICE
-                                        </span>
-                                        <div class="title">
-                                            JMT JCI Accreditation
-                                            Preparation Services
-                                        </div>
-                                    </a>
-                                    <div class="description styled-links dark">
-                                        <p>Accreditation preparation services can include a number of services,
-                                            trainings, and interventions. When you <a href="#register">choose to work
-                                                with JCI Advisory Services</a>, you have access to a team of experts
-                                            that can diagnosis your organization’s needs and then create a suite of
-                                            consulting services specific to your goals, timeline, staffing, and other
-                                            resources.</p>
-                                    </div>
-                                    <a href="#" title="Safe Design of Healthcare Facilities" class="link-re">Discover
-                                        More</a>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <div class="slick-holder">
-                                <div class="featured-img"
-                                     style="background-image:url('./assets/img/media/banner1.png')"></div>
-                                <div class="article-content" data-aos_hidden="fade-up">
-                                    <a href="#" class="feature-head" title="Safe Design of Healthcare Facilities">
-                                        <span class="category ">
-                                            CONSULTING SERVICE
-                                        </span>
-                                        <div class="title">
-                                            Safe Design of Healthcare Facilities
-                                        </div>
-                                    </a>
-                                    <div class="description styled-links dark">
-                                        <p>Creating a safe environment for patients, visitors and <a href="#"> staff is
-                                                one of our priorities.</a> Our expert team provides assistance on
-                                            architectural design, and facility engineering, which focuses on safety and
-                                            quality processes to help build an environment that promotes efficiency,
-                                            effectiveness and excellence.</p>
-                                        <p>We utilize <a href="#">evidence-based health design practices</a> to the
-                                            planning stage and guide you in every stage of the project to ensure that
-                                            standards and safe practices are met.</p>
-                                    </div>
-                                    <a href="#" title="Safe Design of Healthcare Facilities" class="link-re">Discover
-                                        More</a>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <div class="slick-holder">
-                                <div class="featured-img"
-                                     style="background-image:url('./assets/img/media/banner3.png')"></div>
-                                <div class="article-content">
-                                    <a href="#" class="feature-head" title="Safe Design of Healthcare Facilities">
-                                        <span class="category ">
-                                            CONSULTING SERVICE
-                                        </span>
-                                        <div class="title ">
-                                            Accreditation Preparation
-                                        </div>
-                                    </a>
-                                    <div class="description styled-links dark">
-                                        <p>Accreditation is a complex and rigorous process but we can make it easy and
-                                            simple for you. </p>
-                                        <p>Many organizations conduct a mock survey prior to their accreditation survey
-                                            that serves as the final checkpoint in readiness. JMT consultants can work
-                                            with you to simulate the actual survey process and identify gaps in
-                                            standards compliance. <a href="#">This intensive organization-wide exercise
-                                                is an ideal opportunity.</a></p>
-                                    </div>
-                                    <a href="#" title="Safe Design of Healthcare Facilities" class="link-re">Discover
-                                        More</a>
-                                </div>
-                            </div>
-                            <!-- End Loopable divs -->
-                        </div>
+                    <div class="col-lg-12">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Investment Management</li>
+                            </ol>
+                        </nav>
                     </div>
-                    <div class="col-lg-4">
-                        <div class="trending-block article-content" data-aos_hidden="fade-up">
-                            <div class="category" data-aos_hidden="fade-up">
-                                TRENDING SERVICES
-                            </div>
-                            <!-- Vertical Links -->
-                            <div class="vertical-link-list light">
-                                <a href="#">
-                                    Healthcare Consulting Systems & Service
-                                </a>
-                                <a href="#">
-                                    Healthcare Investment Management
-                                </a>
-                                <a href="#">
-                                    Design & Construction of Hospital Facilities
-                                </a>
-                                <a href="#">
-                                    Design & Construction of Hospital Facilities
-                                </a>
-                                <a href="#">
-                                    Trending service Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </a>
-                            </div>
-                            <!--  -->
-                        </div>
-                        <div class="section-title feature-animate-text full-width">Most popular</div>
-                        <!-- Featured link list -->
-                        <div class="article-content featured-link-list" data-aos_hidden="fade-up">
-                            <a href="#">
-                                <span class="category">CONSULTING SERVICE</span>
-                                <div class="title">
-                                    Initial Survey Preparation Package
-                                </div>
-                            </a>
-                            <a href="#">
-                                <span class="category">INVESTMENT</span>
-                                <div class="title">
-                                    Training in Japan and Exchange of Human resources
-                                </div>
-                            </a>
-                            <a href="#">
-                                <span class="category">CONSULTING SERVICE</span>
-                                <div class="title">
-                                    Facility Management
-                                </div>
-                            </a>
-                            <a href="#">
-                                <span class="category">CONSULTING SERVICE</span>
-                                <div class="title">
-                                    Supply Chain Management
-                                </div>
-                            </a>
-                        </div>
-                        <!--  -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-12  text-center">
+                        <blockquote class="animatedText about-header">Joint Advisory aims to provide quality health care services by offering the resources and know-how as well as working in partnership with local medical institutions to meet the growing demand in the market.</blockquote>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Featured Section -->
-    <!-- News Section -->
-    <section id="news-section" class="main-section">
-        <div class="news-wrapper">
-            <div class="container-fluid indent-section">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Content -->
-                        <div class="section-title full-width news-animate-text">New at Joint Advisory</div>
-                        <div class="row news-row">
-                            <div class="col-lg-4 col-sm-12">
-                                <!--  -->
-                                <div class="news-card" data-aos_hidden="fade-up">
-                                    <a href="#">
-                                        <div class="thumbnail"
-                                             style="background-image:url('./assets/img/media/nb1.jpg');"></div>
-                                    </a>
-                                    <div class="article-content">
-                                        <a href="#" class="feature-head">
-                                            <span class="category">Newsletter</span>
-                                            <div class="title">
-                                                JMT Joint Advisory Newsletter
-                                            </div>
-                                            <span class="date">February 12, 2019</span>
-                                        </a>
+    <!-- End About Section -->
+    <!-- Expanded Article -->
+    <section id="expanded-article-section" class="main-section">
+        <div class="article-wrapper">
+            <div class="container-fluid indent-section flat-bottom flat-top">
+                <div class="row article-row">
+                    <div class="col-md-12">
+                        <div class="expanded-article-card article-card">
+                            <div class="article-card__wrapper">
+                                <a href="#">
+                                    <div class="article-card__thumbnail" style="background-image: url('./assets/img/media/about-us.png');"></div>
+                                </a>
+                                <div class="article-card__content article-content">
+                                    <div class="title">
+                                        Investment Management
+                                    </div>
+                                    <div class="description styled-links dark">
+                                        A thorough support to healthcare institutions with operations and management
+                                        solutions.
+                                        Joint Advisory provides a thorough support to healthcare institutions with
+                                        operations and management solutions. The following are the specific services that
+                                        we offer.
                                     </div>
                                 </div>
                             </div>
-                            <!--  -->
-                            <div class="col-lg-4 col-sm-12">
-                                <!--  -->
-                                <div class="news-card" data-aos_hidden="fade-up" data-aos_hidden-delay="200">
-                                    <a href="#">
-                                        <div class="thumbnail"
-                                             style="background-image:url('./assets/img/media/nb2.jpg');"></div>
-                                    </a>
-                                    <div class="article-content">
-                                        <a href="#" class="feature-head">
-                                            <span class="category">Article</span>
-                                            <div class="title">
-                                                GO JMT Joint Advisory
-                                            </div>
-                                            <span class="date">February 12, 2019</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <div class="col-lg-4 col-sm-12">
-                                <!--  -->
-                                <div class="news-card" data-aos_hidden="fade-up" data-aos_hidden-delay="300">
-                                    <a href="#">
-                                        <div class="thumbnail"
-                                             style="background-image:url('./assets/img/media/N1.png');"></div>
-                                    </a>
-                                    <div class="article-content">
-                                        <a href="#" class="feature-head">
-                                            <span class="category">Article</span>
-                                            <div class="title">
-                                                EMR Evaluations
-                                            </div>
-                                            <span class="date">June 20, 2018</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--  -->
                         </div>
-                        <a href="#" title="" class="link-re">See all posts</a>
                     </div>
+                </div>
+            </div>
+    </section>
+    <!-- End Expanded Article -->
+    <section class="main-section">
+        <div class="statistics-wrapper">
+            <div class="container-fluid indent-section ">
+                <!-- Stats -->
+                <div class="stats-row flat general-stat">
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Business
+                            Planning<br>and
+                            Performance</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Human Affairs<br>Project</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Development
+                            of<br> Human Resources</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Performance<br>
+                            Management</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Asset<br>
+                            Management</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Internal
+                            Control</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Release of<br>
+                            Information</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Sales<br>
+                            Promotion</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Marketing</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Administrative<br>
+                            Negotiation</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Financing</h2>
+                    </div>
+                    <div class="stats-card">
+                        <h2 class="stats-desc smaller">Commercial
+                            Dealing</h2>
+                    </div>
+
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- End News Section -->
+
+
+    <!-- Article Grid -->
+    <section id="article-about-section" class="main-section">
+        <div class="article-wrapper">
+            <div class="container-fluid indent-section">
+                <div class="row article-row">
+                    <div class="col-lg-4 col-sm-12 col-xs-12">
+                        <div class=" article-card">
+                            <div class="article-card__wrapper card__shadow--light">
+                                <a href="#">
+                                    <div class="article-card__thumbnail small" style="background-image: url('./assets/img/media/i1.png');"></div>
+                                </a>
+                                <div class="article-card__content article-content">
+                                    <span class="category ">
+                                        SERVICE
+                                    </span>
+                                    <div class="title">
+                                        Standardization of Medical Care
+                                    </div>
+                                    <div class="description">
+                                        Standardization has contributed greatly on healthcare facilities to
+                                        ensuring a good balance between care quality and safety and the
+                                        cost in hospital management.
+                                    </div>
+                                    <a href="./article.html" title="" class="link-re">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 col-xs-12">
+                        <div class=" article-card">
+                            <div class="article-card__wrapper card__shadow--light">
+                                <a href="#">
+                                    <div class="article-card__thumbnail small" style="background-image: url('./assets/img/media/i2.png');"></div>
+                                </a>
+                                <div class="article-card__content article-content">
+                                    <span class="category ">
+                                        SERVICE
+                                    </span>
+                                    <div class="title">
+                                        Training in Japan and Exchange of
+                                        Human resources
+                                    </div>
+                                    <div class="description">
+                                        Joint Advisory connects our overseas partner hospitals with opportunities to have their staff train or have a first hand ...
+                                    </div>
+                                    <a href="./article.html" title="" class="link-re">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-12 col-xs-12">
+                        <div class=" article-card">
+                            <div class="article-card__wrapper card__shadow--light">
+                                <a href="#">
+                                    <div class="article-card__thumbnail small" style="background-image: url('./assets/img/media/i3.png');"></div>
+                                </a>
+                                <div class="article-card__content article-content">
+                                    <span class="category ">
+                                        SERVICE
+                                    </span>
+                                    <div class="title">
+                                        Hospital Planning and Construction Management
+                                    </div>
+                                    <div class="description">
+                                        Joint Advisory partners with investment companies, engineering and architectural firms who have extensive ...
+                                    </div>
+                                    <a href="./article.html" title="" class="link-re">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- End Article Grid -->
+    <section id="expanded-article-section_cost-review" class="main-section">
+        <div class="article-wrapper">
+            <div class="container-fluid indent-section flat-bottom flat-top">
+                <div class="row article-row">
+                    <div class="col-md-12">
+                        <div class="expanded-article-card article-card">
+                            <div class="article-card__wrapper">
+                                <a href="#">
+                                    <div class="article-card__thumbnail" style="background-image: url('./assets/img/media/cost-review.png');"></div>
+                                </a>
+                                <div class="article-card__content article-content">
+                                    <div class="title">
+                                        Cost Review
+                                    </div>
+                                    <div class="description styled-links dark">
+                                        Committed to provide you with the science-based, health-focused and quality-centered assistance to protect both your clientele and your organization.
+                                        <br><br>
+                                        Whether you operate from a single or multiple bases, Joint Advisory ensures you hassle-free business costs management. JA helps companies boost profits and reduce unnecessary costs through business ‘health check’.
+                                        <br><br>
+                                        It can be complex when you have to make big business decisions on business expenditures and have inadequate time, knowledge or experience. You may fall into the trap of expensive roll -over renewal contracts that so many companies get tied up by not reading the small print.
+                                    </div>
+                                    <a href="./.html" title="" class="link-re">Learn more about Cost Review</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
     <!-- Register Section -->
     <section id="register-section" class="main-section">
         <div class="register-wrapper">
@@ -659,6 +626,7 @@
         </div>
     </section>
     <!-- End Register Section -->
+
     <!-- Footer Section -->
     <footer>
         <div class="footer-wrapper">
@@ -670,18 +638,11 @@
                         </div>
                         <img src="./assets/img/footer-logo.png" height="60px" alt="">
                         <small class="styled-links dark">
-                            No part of this publication may be reproduced, stored in a retrieval system, used in a
-                            spreadsheet, or transmitted in any form or by any means—electronic, mechanical,
-                            photocopying, recording, or otherwise—without the permission of <a href="">Japan Medical
-                                Tourism Inc.</a>
+                            No part of this publication may be reproduced, stored in a retrieval system, used in a spreadsheet, or transmitted in any form or by any means—electronic, mechanical, photocopying, recording, or otherwise—without the permission of <a href="">Japan Medical Tourism Inc.</a>
                         </small>
                         <small class="styled-links dark">
-                            To order copies or request permission to reproduce materials, call <a
-                               href="tel:+81 3- 5288-5715 ">+81 3- 5288-5715 </a>, write 100-0004, Japan, Tokyo,
-                            Chiyoda-ku,1-9-2 Otemachi Otemachi Financial City, 3F Grand Cube or go to <a
-                               href="http://www.japanmedicaltourism.com">http://www.japanmedicaltourism.com.</a>
+                            To order copies or request permission to reproduce materials, call <a href="tel:+81342436050">+81 3-4243-6050</a>, write 100-0004, Japan, Tokyo, Chiyoda-ku,1-9-2 Otemachi Otemachi Financial City, 3F Grand Cube or go to <a href="http://www.japanmedicaltourism.com">http://www.japanmedicaltourism.com.</a>
                         </small>
-
                         <small>Copyright © 2017 JMT Joint Advisory. </small>
                     </div>
                     <div class="col-lg-2 offset-lg-2 col-sm-6 sub-content">
@@ -719,7 +680,6 @@
                             <a href="#">answers@jointadvisory.com</a>
                             <a href="#">+81 3 5288 5715</a>
                         </div>
-
                     </div>
                     <div class="col-lg-2 col-sm-6 sub-content">
                         <div class="article-content styled-links dark">
@@ -732,7 +692,6 @@
                             <a href="#"><img src="./assets/img/icons/linkedin.svg" height="25px" alt=""> LinkedIn</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -755,16 +714,16 @@
     <script src="assets/js/core/scripts.js"></script>
     <script>
         $(function () {
-            // AOS.init({
-            //     offset: 0, // offset (in px) from the original trigger point
-            //     delay: 0, // values from 0 to 3000, with step 50ms
-            //     duration: 500, // values from 0 to 3000, with step 50ms 
-            //     once: true, // whether animation should happen only once - while scrolling down 
-            // });
+            AOS.init({
+                offset: 0, // offset (in px) from the original trigger point
+                delay: 0, // values from 0 to 3000, with step 50ms
+                duration: 500, // values from 0 to 3000, with step 50ms 
+                once: true, // whether animation should happen only once - while scrolling down 
+            });
         });
 
         $(window).on('load', function () {
-            // AOS.refresh();
+            AOS.refresh();
         });
 
         $('.animated-text').each(function () {
@@ -837,6 +796,26 @@
         });
     </script>
     <script>
+
+
+        // Fewer amount of bones on small screens looks best
+        var bone1;
+        $('#wave-1').wavify({
+            height: 120,
+            amplitude: 15,
+            speed: 0.155,
+            bones: bone1,
+            color: 'rgba(21, 94, 99, 1)'
+        });
+        $('#wave-3').wavify({
+            height: 120,
+            amplitude: 15,
+            speed: 0.155,
+            bones: bone1,
+            color: 'rgba(21, 94, 99, 1)'
+        }); 
+    </script>
+    <script>
         (function () {
             'use strict';
             window.addEventListener('load', function () {
@@ -854,8 +833,6 @@
                 });
             }, false);
         })();
-    </script>
-    <script>
     </script>
 </body>
 
