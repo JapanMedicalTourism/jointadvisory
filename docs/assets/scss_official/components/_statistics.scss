@@ -10,9 +10,24 @@
 	// 	align-items: center;	
 	// }
 
+	&.general-stat{
+		.stats-card{
+			margin-top: 25px;
+			margin-bottom: 25px;
+			min-height: 95px;
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
 	.statistics-wrapper &{
-		margin-top: 80px;
-		margin-bottom: 80px;
+		margin-top: 80px; 
+		&.flat{
+			margin-bottom: 80px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 		@include mobile{
 			margin-top: 30px;
 			margin-bottom: 30px;
@@ -60,14 +75,26 @@
 	h2.stats-desc{ 
 		@include primary_font('regular');
 		@include font-size(40px);
+		&.smaller{
+			@include font-size(22px);
+		}
 		@include desktop(hd){
 			@include font-size(20px);
+			&.smaller{
+				@include font-size(20px);
+			}
 		}
 		@include tablet{
 			@include font-size(20px);
+			&.smaller{
+				@include font-size(20px);
+			}
 		}
 		@include mobile{
 			@include font-size(17px);
+			&.smaller{
+				@include font-size(17px);
+			}
 		}
 	}
 	small.stats-sub{
