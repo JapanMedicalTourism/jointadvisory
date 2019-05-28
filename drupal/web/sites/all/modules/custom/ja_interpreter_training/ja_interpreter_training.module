@@ -22,25 +22,25 @@
 		$items['admin/config/codmancommunications-interpreter-training-application-form'] = array(
 		    'title' => 'Codman Communications Interpreter Training Applicants',
 		    'description' => 'Codman Communications Interpreter Training Applicants',
-		    'page callback' => 'ja_interpreter_training_list',
+		    'page callback' => 'drupal_get_form',
 		    'page arguments' => array('ja_interpreter_training_list'),
-			'access arguments' =>  array(array('view ja_interpreter_training submissions')),
+			'access arguments' =>  array('view ja_interpreter_training submissions'),
 		    'file' => 'includes/ja_interpreter_training.list.inc',
 		);
 
 		$items['admin/config/codmancommunications-interpreter-training-application-form/%'] = array(
 		    'title' => 'Codman Communications Interpreter Training Applicants',
 		    'description' => 'Codman Communications Interpreter Training Applicants',
-		    'page callback' => 'ja_interpreter_training_view',
-		    'page arguments' => array('ja_interpreter_training_list', 3),
-			'access arguments' =>  array(array('view ja_interpreter_training submissions')),
+		    'page callback' => 'drupal_get_form',
+		    'page arguments' => array('ja_interpreter_training_view', 3),
+			'access arguments' =>  array('view ja_interpreter_training submissions'),
 		    'file' => 'includes/ja_interpreter_training.list.inc',
 		);
 
 		return $items;
 	}
 
-	function cognita_student_management_permission(){
+	function ja_interpreter_training_permission(){
 		$perms = array(	    
 		    'view ja_interpreter_training submissions' => array(
 		      'title' => t('View Codman Communications Interpreter Training Submissions'), 
@@ -90,9 +90,12 @@
 	    		'modified' => date('Y-m-d H:i:s'),
 	    	))->execute();
 
+	    _send_email_notification($_POST, $registration_id);
+
 		if($_POST['payment_method'] == 'paypal'){
 			$enableSandbox = true;
 			$paypalConfig = [
+			    // 'email' => 'jmt@japanmedicaltourism.com',
 			    'email' => 'jointadvisory@gmail.com',
 			    'return_url' => 'http://jointadvisory.com/trainings/codmancommunications-interpreter-training-application-form/success',
 			    'cancel_url' => 'http://jointadvisory.com/trainings/codmancommunications-interpreter-training-application-form/cancelled',
@@ -230,22 +233,22 @@
 		parse_str($contents, $output);
 		watchdog('ja_training_training', $output['payment_status']);
 
+		db_update('ja_training_registration')
+	    	->fields(array(
+	    		'status' => strtolower($output['payment_status']),
+	    	))->condition('id', $_GET['registration_id'])
+	    	->execute();
+
+	    db_insert('ja_training_payments')
+	    	->fields(array(
+	    		'txnid' => $output['txn_id'],
+	    		'payment_amount' => $output['mc_gross'],
+	    		'payment_status' => $output['payment_status'],
+	    		'registration_id' => $_GET['registration_id'],
+	    		'created' => date('Y-m-d H:i:s'),
+	    	))->execute();
+
 		if ($output['payment_status'] == 'Completed') {
-		    db_insert('ja_training_payments')
-		    	->fields(array(
-		    		'txnid' => $output['txn_id'],
-		    		'payment_amount' => $output['mc_gross'],
-		    		'payment_status' => $output['payment_status'],
-		    		'registration_id' => $_GET['registration_id'],
-		    		'created' => date('Y-m-d H:i:s'),
-		    	))->execute();
-
-		    db_update('ja_training_registration')
-		    	->fields(array(
-		    		'status' => 'complete',
-		    	))->condition('id', $_GET['registration_id'])
-		    	->execute();
-
 		    _send_confirmation_email($_GET['registration_id']);
 		}
 	}
@@ -265,7 +268,7 @@
 			口座番号：9296173<br />
 			口座名義：ジャパンメディカルツーリズム株式会社</p>
 
-			<p>ご注意；お振込み名義人が申込者と異なる場合には、ai.kuruma@japanmedicaltoruism.comまでご連絡ください。<br />
+			<p>ご注意；お振込み名義人が申込者と異なる場合には、ai.kuruma@japanmedicaltourism.comまでご連絡ください。<br />
 			振込いただいた翌週にトレーニング参加のご案内メールを送信いたします。</p>';
 
 			$params['message'] = $message;
@@ -361,6 +364,39 @@
 		$params['message'] = $message;
 		$params['subject'] = 'Thank you for your payment - Codman Communications Interpreter Training';
 		$mail = drupal_mail('ja_interpreter_training', 'banktransfer', $registration['email'], NULL, $params);
+	}
+
+	function _send_email_notification($details, $id){
+		$recipients = array('sutter@japanmedicaltourism.com, ai.kuruma@japanmedicaltourism.com');
+
+		$message = '<p>Here are the registrant information:</p>
+		<p>First Name: '.$details['first_name'].'<br>
+		Last Name: '.$details['last_name'].'<br>
+		Email Address: '.$details['email'].'<br>
+		Contact: '.$details['contact'].'<br>
+		Address: '.$details['address1'].'<br>
+		Reason: '.$details['message'].'<br>
+		Will work as an interpreter: '.($details['interpreter'] ? 'Yes' : 'No').'<br>
+		Payment Method: '.($details['payment_method'] == 'paypal' ? 'Paypal' : 'Bank Transfer').'<br>
+		Participation Type: '.ucfirst($details['participation_type']).'<br></p>
+
+		<p>Topics:</p>
+		<p>';
+
+		foreach ($details['product'] as $product) {
+			$message .= $product . '<br>';
+		}
+
+		$message .= '</p>
+		<p>You can also view it here:<br>
+		http://jointadvisory.com/drupal/web/admin/config/codmancommunications-interpreter-training-application-form/'.$id.'</p>';
+
+		$params['message'] = $message;
+		$params['subject'] = 'New registration has been placed - Codman Communications Interpreter Training';
+
+		foreach ($recipients as $recipient) {
+			$mail = drupal_mail('ja_interpreter_training', 'banktransfer', $recipient, NULL, $params);
+		}
 	}
 
 	function ja_interpreter_training_mail ($key, &$message, $params) {
