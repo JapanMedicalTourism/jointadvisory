@@ -453,7 +453,7 @@ p {
   background: -webkit-gradient(linear, left top, right top, from(#045D63), to(#00C0C0));
   background: linear-gradient(to right, #045D63 0%, #00C0C0 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
 }
 
 .gradient-4 {
