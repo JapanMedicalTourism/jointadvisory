@@ -1,13 +1,74 @@
+# -----------------------------------------------------------------
+# .gitignore
+# Bare Minimum Git 
+# -----------------------------------------------------------------
 
-drupal/web/sites/all/sftp-config.json
-drupal/web/sites/all/themes/custom/jointadvisory/assets/.DS_Store
-drupal/web/sites/all/themes/custom/jointadvisory/assets/.DS_Store
-drupal/web/sites/all/themes/custom/jointadvisory/.DS_Store
-drupal/web/sites/all/themes/custom/.DS_Store
-drupal/web/sites/all/themes/.DS_Store
-drupal/web/sites/all/.DS_Store
-drupal/web/sites/.DS_Store
-drupal/.DS_Store
-docs/assets/.DS_Store
-docs/assets/.DS_Store
-drupal/web/sites/all/themes/custom/jointadvisory/assets/.DS_Store
+# ignore all files starting with . or ~
+.*
+~*
+
+# ignore node/grunt dependency directories
+node_modules/
+
+# ignore composer vendor directory
+/vendor
+/drupal/web/sites/all/sftp-config.json
+/drupal/web/sites/all/themes/custom/jointadvisory/assets/.DS_Store
+/drupal/web/sites/all/themes/custom/jointadvisory/assets/.DS_Store
+/drupal/web/sites/all/themes/custom/jointadvisory/.DS_Store
+/drupal/web/sites/all/themes/custom/.DS_Store
+/drupal/web/sites/all/themes/.DS_Store
+/drupal/web/sites/all/.DS_Store
+/drupal/web/sites/.DS_Store
+/drupal/.DS_Store
+/docs/assets/.DS_Store
+/docs/assets/.DS_Store
+/drupal/web/sites/all/themes/custom/jointadvisory/assets/.DS_Store
+
+# ignore components loaded via Bower
+/bower_components
+
+# ignore jekyll build directory
+/_site
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
+!.gitignore
+!.editorconfig
+!.phpcs.xml.dist
+ 
