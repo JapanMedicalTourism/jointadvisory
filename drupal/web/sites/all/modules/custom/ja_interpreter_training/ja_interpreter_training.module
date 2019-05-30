@@ -367,7 +367,7 @@
 	}
 
 	function _send_email_notification($details, $id){
-		$recipients = array('sutter@japanmedicaltourism.com, ai.kuruma@japanmedicaltourism.com');
+		$recipients = array('sutter@japanmedicaltourism.com, ai.kuruma@japanmedicaltourism.com, j.nanat@japanmedicaltourism.com');
 
 		$message = '<p>Here are the registrant information:</p>
 		<p>First Name: '.$details['first_name'].'<br>
