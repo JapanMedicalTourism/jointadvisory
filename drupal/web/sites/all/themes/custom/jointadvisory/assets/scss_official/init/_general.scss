@@ -7,6 +7,7 @@
 // Defaults
 html, body{
 	font-size: $rem_base;
+	overflow-x: hidden;
 	@include secondary_font();
 }
 
@@ -23,7 +24,7 @@ html, body{
 
 @media (min-width: 1900px){
 	.container-fluid{
-		max-width: 1920px;
+		max-width: 1620px;
 	}
 }
 
@@ -48,12 +49,12 @@ a{
 	@include desktop(hd){
 		padding-left: rem-calc(20px);
 		padding-right: rem-calc(20px);
-	}
-	  &.flat-top{
-		padding-top: 0px;
+	} 
+	&.flat-top{
+		padding-top: 10px;
 	}
 	&.flat-bottom{
-		padding-bottom:0px;
+		padding-bottom: 10px;
 	}
 }
 .main-section{
@@ -136,5 +137,19 @@ a{
 	}
 }
 
+.form-control{
+	padding-left: 0px;
+}
 
-
+/* Consulting Services */
+.services-banner-img{
+	overflow: hidden;
+	position: absolute;
+	min-height: 300px;
+	img{
+		height: 400px;
+	}
+	@include tablet(){
+		display: none;
+	}
+}

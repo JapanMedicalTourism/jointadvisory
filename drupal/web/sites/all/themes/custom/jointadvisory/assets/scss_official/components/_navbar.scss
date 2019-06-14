@@ -491,3 +491,8 @@ $scale: 1;			  // icon scale 68/68 default
     left: 36px;
   }
 }
+
+.logged-in .navbar{
+  position: absolute;
+  top: unset;
+}
