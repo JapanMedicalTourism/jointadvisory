@@ -122,58 +122,13 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="trending-block article-content" data-aos_hidden="fade-up">
-                            <div class="category" data-aos_hidden="fade-up">
-                                TRENDING SERVICES
-                            </div>
-                            <!-- Vertical Links -->
-                            <div class="vertical-link-list light">
-                                <a href="#">
-                                    Healthcare Consulting Systems & Service
-                                </a>
-                                <a href="#">
-                                    Healthcare Investment Management
-                                </a>
-                                <a href="#">
-                                    Design & Construction of Hospital Facilities
-                                </a>
-                                <a href="#">
-                                    Design & Construction of Hospital Facilities
-                                </a>
-                                <a href="#">
-                                    Trending service Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </a>
-                            </div>
-                            <!--  -->
-                        </div>
-                        <div class="section-title feature-animate-text full-width">Most popular</div>
-                        <!-- Featured link list -->
-                        <div class="article-content featured-link-list" data-aos_hidden="fade-up">
-                            <a href="#">
-                                <span class="category">CONSULTING SERVICE</span>
-                                <div class="title">
-                                    Initial Survey Preparation Package
-                                </div>
-                            </a>
-                            <a href="#">
-                                <span class="category">INVESTMENT</span>
-                                <div class="title">
-                                    Training in Japan and Exchange of Human resources
-                                </div>
-                            </a>
-                            <a href="#">
-                                <span class="category">CONSULTING SERVICE</span>
-                                <div class="title">
-                                    Facility Management
-                                </div>
-                            </a>
-                            <a href="#">
-                                <span class="category">CONSULTING SERVICE</span>
-                                <div class="title">
-                                    Supply Chain Management
-                                </div>
-                            </a>
-                        </div>
+                        <?php 
+                            $trending = module_invoke('views', 'block_view', 'trending_services-block');
+                            print render($trending['content']);
+
+                            $popular = module_invoke('views', 'block_view', 'most_popular_services-block');
+                            print render($popular['content']);
+                        ?>
                         <!--  -->
                     </div>
                 </div>
