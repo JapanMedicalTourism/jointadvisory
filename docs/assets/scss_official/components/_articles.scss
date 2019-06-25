@@ -95,12 +95,16 @@
 		}
 	}
 	.expanded-article-card &{
-		width: calc(100% - 100px);
+		width: calc(100% - 100px); 
 		margin-left: 50px;
 		position: relative;
 		margin-top: -50px;
 		background-color: #FFF;
 		padding: 50px 50px;
+		&.full{
+			width: 100%;
+			margin-left: 0px;
+		}
 		@include mobile(){
 			width: calc(100% - 20px);
 			margin-left: 10px; 

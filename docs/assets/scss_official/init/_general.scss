@@ -2,8 +2,7 @@
  
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
-
-
+ 
 // Defaults
 html, body{
 	font-size: $rem_base;
@@ -151,5 +150,116 @@ a{
 	}
 	@include tablet(){
 		display: none;
+	}
+}
+
+/* Pathway Stylings */
+.pathway-section{
+	margin-top: 100px;
+}
+.pathway-banner-img{ 
+	position: absolute;
+	min-height: 300px;
+	width: 100%; 
+	img{
+		height: 400px;
+		&.larger{
+			transform: scale(1.4);
+		}
+	}
+	@include tablet(){
+		display: none;
+	}
+	&.overlap-left{
+		left: -40px;
+		top: -10px;
+	}
+}
+.pathway-row{
+	margin-bottom: 160px;
+	@media(max-width: 990px){
+		margin-bottom: 150px;
+	}
+	&:last-child{
+		margin-bottom: 0px;
+	}
+	position: relative;
+	&:nth-child(1){
+		.line-path{
+			position: absolute;
+    		left: 50%;
+    		transform: translateX(-50%) translateY(160px);
+		}
+	}
+	&:nth-child(2){
+		.line-path{
+			position: absolute;
+    		left: 50%;
+    		transform: translateX(-50%) translateY(160px);
+		}
+	}
+	&:nth-child(3){
+		.line-path{
+			position: absolute;
+    		left: 50%;
+    		transform: translateX(-50%) translateY(230px);
+		}
+	}
+	@include tablet(){
+		.line-path{
+			display: none;
+		}
+	}
+}
+
+.pathway-section{
+	z-index: 4000;
+}
+
+.pathway-article{
+	position: relative; 
+	top: 100px;
+	height: 100%;
+	z-index: 1000;
+	left: 0px;
+	transition: 0.7s ease-in-out;
+	.article-card__content-more{
+		display: none;
+	}
+	&.open{
+		z-index: 10000;
+		width: 100%;
+		position: fixed; 
+		.article-card__wrapper{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			transition: 0.5s ease-in-out;
+		}
+		.article-card__content-more{
+			display: block;
+			width: 100%;
+			*{ 
+				max-width: 100%;
+			}
+		}
+		.article-card__content{
+			flex-wrap: nowrap;
+			max-width: 100%;
+			transition: 0.5s ease-in-out;
+			width: calc(100vw - 40vw) !important;
+			@media( max-width: 992px){
+				width: calc(100vw - 14vw) !important;
+			}
+			height: calc(100vh - 15vh);
+			margin-bottom: 10px;
+			margin-top: 0px;
+			box-shadow: 0px 13px 20px 20px rgba(33, 37, 41, 0.08);
+			border-radius: 10px;
+			overflow-y: auto;
+			flex-direction: column;
+			background: #FFF;
+		}
 	}
 }
