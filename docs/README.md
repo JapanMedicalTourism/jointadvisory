@@ -31,6 +31,9 @@ We evaluate your Organization’s status and current level of compliance with sp
 Mock Survey – step 4
 Many organizations conduct a mock survey prior to their accreditation survey that serves as the  final checkpoint in readiness. JMT consultants can work with you to simulate the actual survey process and identify gaps in standards compliance. This intensive organization-wide exercise is an ideal opportunity to engage senior leaders and prepare staff for the actual survey.
 
+
+
+
 Focused Consulting - Training And Eval step 3
 Before or after the mock survey, JCI consultants can provide crucial support in high- priority areas where you are struggling with compliance. Your staff and leadership can work with our expert team to develop a customized agenda using a combination of focused tracers, work groups, and on-site training to identify practical solutions.
 
