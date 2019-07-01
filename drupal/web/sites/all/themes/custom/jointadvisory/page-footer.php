@@ -34,8 +34,8 @@
                             <a href="./by-the-numbers.html">By the Numbers</a>
                             <a href="./services.html">Services</a>
                             <a href="./investments.html">Investments</a>
-                            <a href="./contact-us.html">Contact</a>
-                            <a href="./contact-us.html">Terms of Use</a>
+                            <a href="./contact.html">Contact</a>
+                            <a href="./contact.html">Terms of Use</a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-6 sub-content">

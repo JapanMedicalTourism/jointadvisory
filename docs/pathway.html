@@ -80,7 +80,7 @@
                 <a href="./services.html">Services</a>
                 <a href="./the-team.html">The Team</a>
                 <a href="./investment.html">Investment</a>
-                <a href="./contact-us.html">Contact</a>
+                <a href="./contact.html">Contact</a>
             </div>
             <hr>
             <!-- Vertical Links -->
@@ -211,7 +211,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item active dropdown megamenu-li">
+                    <li class="nav-item dropdown megamenu-li">
                         <a class="nav-link dropdown-toggle" href="" id="services-megamenu" data-toggle="dropdown"
                            aria-haspopup="true"
                            aria-expanded="false">Services</a>
@@ -278,7 +278,7 @@
                     <li class="nav-item">
                         <a class="nav-link " href="./investment.html">Investment</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="./contact.html">Contact</a>
                     </li>
 
@@ -787,8 +787,8 @@
                             <a href="./by-the-numbers.html">By the Numbers</a>
                             <a href="./services.html">Services</a>
                             <a href="./investments.html">Investments</a>
-                            <a href="./contact-us.html">Contact</a>
-                            <a href="./contact-us.html">Terms of Use</a>
+                            <a href="./contact.html">Contact</a>
+                            <a href="./contact.html">Terms of Use</a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-sm-6 sub-content">
@@ -841,48 +841,8 @@
     <script src="assets/js/vendor/wavify.js"></script>
     <!-- Custom Scripts -->
     <script src="assets/js/core/splitline.js"></script>
-    <script src="assets/js/core/scripts.js"></script>
-    <script>
-        // Pathway div toggles
-        let pathwayToggles = $('.pathway-step-toggle');
-        pathwayToggles.on('click', function(){
-            const pathwayStepTarget = $($(this).data('toggle')); 
-            pathwayStepTarget.toggleClass('open');
-            $(this).text(($(this).text() == "Learn More" ? "Close" : "Learn More"));
-        });
-
-        $.fn.moveIt = function () {
-                var $window = $(window);
-                var instances = [];
-
-                $(this).each(function () {
-                    instances.push(new moveItItem($(this)));
-                });
-
-                window.addEventListener('scroll', function () {
-                    var scrollTop = $window.scrollTop();
-                    instances.forEach(function (inst) {
-                        inst.update(scrollTop);
-                    });
-                }, { passive: true });
-            }
-
-            var moveItItem = function (el) {
-                this.el = $(el);
-                this.speed = parseInt(this.el.attr('data-scroll-speed'));
-            };
-
-            moveItItem.prototype.update = function (scrollTop) {
-                this.el.css('transform', 'translateY(' + -(scrollTop / this.speed) + 'px)');
-            };
-
-            // Initialization
-            $(function () {
-                $('[data-scroll-speed]').moveIt();
-            });
-    </script>
-    <script> 
-    </script>
+    <script src="assets/js/core/scripts.js"></script>  
+ 
     <script>
         (function () {
             'use strict';
