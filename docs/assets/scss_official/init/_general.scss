@@ -282,8 +282,9 @@ a{
 			flex-wrap: nowrap;
 			max-width: 100%;
 			// transition: 0.5s ease-in-out;
-			width: calc(100vw - 40vw) !important;
-			 
+			
+			width: 50% !important;
+			 min-width: 700px;
 			border-radius: 5px;
 			height: calc(100vh - 30vh);
 			@media( max-width: 992px){
@@ -296,10 +297,16 @@ a{
 			flex-direction: column;
 			background: #FFF; 
 			@media( max-width: 992px){
-				width: calc(100vh - 50px) !important;
+				width: 100% !important;
+				min-width: 100% !important;
 				padding: 50px 20px 50px 20px;
-				height: calc(100% - 100px);
+				height: calc(100% - 89px);
+				top: -11px;
 			}
 		}
 	}
+}
+
+.map-contact-us{
+	height: 280px;
 }
