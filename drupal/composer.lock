@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef9f11ef1caea358fd927e223df49118",
+    "content-hash": "3c1d2278409f250bd8fd39a4bbc54345",
     "packages": [
         {
             "name": "composer/installers",
@@ -1729,6 +1729,54 @@
             }
         },
         {
+            "name": "drupal/paragraphs_summary",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/paragraphs_summary.git",
+                "reference": "7.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_summary-7.x-1.0.zip",
+                "reference": "7.x-1.0",
+                "shasum": "e472fbb4bef3ebada44ea6b094ec7be3fb89016f"
+            },
+            "require": {
+                "drupal/drupal": "~7.0",
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "7.x-1.0",
+                    "datestamp": "1474457939",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/7/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "opi",
+                    "homepage": "https://www.drupal.org/user/263678"
+                }
+            ],
+            "description": "Additionnal formatter for paragraphs fields",
+            "homepage": "https://www.drupal.org/project/paragraphs_summary",
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs_summary"
+            }
+        },
+        {
             "name": "drupal/pathauto",
             "version": "1.3.0",
             "source": {
@@ -2441,9 +2489,7 @@
             "version": "5.2.26",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/PHPMailer/PHPMailer/archive/5.2-stable.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/PHPMailer/PHPMailer/archive/5.2-stable.zip"
             },
             "type": "drupal-library"
         },

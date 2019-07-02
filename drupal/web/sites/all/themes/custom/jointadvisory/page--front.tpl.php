@@ -37,87 +37,56 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <!-- Content -->
-                        <div class="section-title feature-animate-text">Featured</div>
+                        <div class="section-title feature-animate-text"><?php echo t('Featured'); ?></div>
                         <div class="slick single-item featured-banner featured-slick">
                             <!-- Loopable divs .slick-holder -->
+                            <?php
+                                global $language;
+
+                                $query = new EntityFieldQuery;
+                                $query->entityCondition('entity_type', 'node')
+                                            ->entityCondition('bundle', 'service')
+                                            ->fieldCondition('field_featured', 'value', 1)
+                                            ->propertyCondition('status', 1)
+                                            ->propertyOrderBy("created", $direction = 'DESC')
+                                            ->propertyCondition('language', $language->language, '=');  
+
+                                $results = $query->execute();  
+                                if(!empty($results['node'])){
+                                    foreach ($results['node'] as $key => $value) {
+                                        $node = node_load($value->nid);
+                                        $image = file_create_url($node->field_banner['und'][0]['uri']);
+
+                                        $options = array('absolute' => TRUE);
+                                        $url = url('node/' . $node->nid, $options);
+
+                                        $term = taxonomy_term_load($node->field_content_category['und'][0]['tid']);
+
+                                        $body_details_string = strip_tags($node->field_summary['und'][0]['value']);
+                                        $trimmed_details_string = (strlen($body_details_string) > 320) ? substr($body_details_string,0,320)."..." : $body_details_string;
+                            ?>
                             <div class="slick-holder">
                                 <div class="featured-img"
-                                     style="background-image:url('<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/media/banner2.png')"></div>
+                                     style="background-image:url('<?php echo $image; ?>')"></div>
                                 <div class="article-content" data-aos_hidden="fade-up">
-                                    <a href="#" class="feature-head" title="Safe Design of Healthcare Facilities">
+                                    <a href="<?php echo $url; ?>" class="feature-head" title="<?php echo $node->title ?>">
                                         <span class="category ">
-                                            CONSULTING SERVICE
+                                            <?php echo $term->name; ?> SERVICE
                                         </span>
                                         <div class="title">
-                                            JMT JCI Accreditation
-                                            Preparation Services
+                                            <?php echo $node->title; ?>
                                         </div>
                                     </a>
                                     <div class="description styled-links dark">
-                                        <p>Accreditation preparation services can include a number of services,
-                                            trainings, and interventions. When you <a href="#register">choose to work
-                                                with JCI Advisory Services</a>, you have access to a team of experts
-                                            that can diagnosis your organization’s needs and then create a suite of
-                                            consulting services specific to your goals, timeline, staffing, and other
-                                            resources.</p>
+                                        <p><?php echo $trimmed_details_string; ?></p>
                                     </div>
-                                    <a href="#" title="Safe Design of Healthcare Facilities" class="link-re">Discover
-                                        More</a>
+                                    <a href="<?php echo $url; ?>" title="<?php echo $node->title ?>" class="link-re"><?php echo t('Discover More'); ?></a>
                                 </div>
                             </div>
-                            <!--  -->
-                            <div class="slick-holder">
-                                <div class="featured-img"
-                                     style="background-image:url('<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/media/banner1.png')"></div>
-                                <div class="article-content" data-aos_hidden="fade-up">
-                                    <a href="#" class="feature-head" title="Safe Design of Healthcare Facilities">
-                                        <span class="category ">
-                                            CONSULTING SERVICE
-                                        </span>
-                                        <div class="title">
-                                            Safe Design of Healthcare Facilities
-                                        </div>
-                                    </a>
-                                    <div class="description styled-links dark">
-                                        <p>Creating a safe environment for patients, visitors and <a href="#"> staff is
-                                                one of our priorities.</a> Our expert team provides assistance on
-                                            architectural design, and facility engineering, which focuses on safety and
-                                            quality processes to help build an environment that promotes efficiency,
-                                            effectiveness and excellence.</p>
-                                        <p>We utilize <a href="#">evidence-based health design practices</a> to the
-                                            planning stage and guide you in every stage of the project to ensure that
-                                            standards and safe practices are met.</p>
-                                    </div>
-                                    <a href="#" title="Safe Design of Healthcare Facilities" class="link-re">Discover
-                                        More</a>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <div class="slick-holder">
-                                <div class="featured-img"
-                                     style="background-image:url('<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/media/banner3.png')"></div>
-                                <div class="article-content">
-                                    <a href="#" class="feature-head" title="Safe Design of Healthcare Facilities">
-                                        <span class="category ">
-                                            CONSULTING SERVICE
-                                        </span>
-                                        <div class="title ">
-                                            Accreditation Preparation
-                                        </div>
-                                    </a>
-                                    <div class="description styled-links dark">
-                                        <p>Accreditation is a complex and rigorous process but we can make it easy and
-                                            simple for you. </p>
-                                        <p>Many organizations conduct a mock survey prior to their accreditation survey
-                                            that serves as the final checkpoint in readiness. JMT consultants can work
-                                            with you to simulate the actual survey process and identify gaps in
-                                            standards compliance. <a href="#">This intensive organization-wide exercise
-                                                is an ideal opportunity.</a></p>
-                                    </div>
-                                    <a href="#" title="Safe Design of Healthcare Facilities" class="link-re">Discover
-                                        More</a>
-                                </div>
-                            </div>
+                            <?php 
+                                    }
+                                } 
+                            ?>
                             <!-- End Loopable divs -->
                         </div>
                     </div>
