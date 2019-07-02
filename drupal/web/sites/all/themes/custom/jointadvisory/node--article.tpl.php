@@ -13,7 +13,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="<?php echo base_path(); ?>">Home</a></li>
-                            <li class="breadcrumb-item"><a href="<?php echo base_path(); ?>services">Services</a></li>
+                            <li class="breadcrumb-item"><a href="<?php echo base_path(); ?>articles">Aticles</a></li>
                             <li class="breadcrumb-item active" aria-current="page"><?php echo $node->title; ?></li>
                         </ol>
                     </nav>
