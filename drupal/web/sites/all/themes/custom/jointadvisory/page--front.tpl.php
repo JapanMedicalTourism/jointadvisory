@@ -41,10 +41,6 @@
                         <div class="slick single-item featured-banner featured-slick">
                             <!-- Loopable divs .slick-holder -->
                             <?php
-                                $node = node_load(45);
-                                var_dump($node);
-                                exit();
-
                                 global $language;
 
                                 $query = new EntityFieldQuery;
