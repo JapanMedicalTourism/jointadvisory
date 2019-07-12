@@ -74,3 +74,30 @@ Only one JCI template: Just plug the appropriate contents
 Consistency consulting (MECE framework)
 
 ↑Why JMT? The JMT Advantage
+
+
+
+
+July 10 2019
+- Email 3 catch phrase/slogan for Codman COmmunications
+
+JMT.JP
+Rearrange event tabs
+LEFT: UPCOMING
+CENTER: PREVIOUS
+RIGHT: ALL EVENTS
+- Add SEO
+
+JMT.COM
+Resize: Geneva partnership, remove link
+Not secure: SSL issue
+Home: HealthKit - add space
+- Add SEO
+
+General
+- SSL Certificate Pricing
+
+Future
+- JMT App
+- JMT Survey Form E-system Automated evaluation (all platforms)
+- 4 hospital
