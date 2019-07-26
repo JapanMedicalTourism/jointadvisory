@@ -460,7 +460,7 @@ Zoomアプリケーションを使用したオンライントレーニングで�
 
                                     <div class="checkbox">
 
-                                      <label><input type="checkbox" name="product[]"  value="消化器科Gastroenterology - 患者のケア COP（8/8/2019)" > 消化器科Gastroenterology<br>患者のケア COP <font color="red">日程調整中</font>
+                                      <label><input type="checkbox" name="product[]"  value="消化器科Gastroenterology - 患者のケア COP" > 消化器科Gastroenterology<br>患者のケア COP <font color="red">日程調整中</font>
                                       </label>
 
                                     </div>
