@@ -13,10 +13,10 @@
             <div class="container-fluid indent-section">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 text-left banner-text">
-                        <h1 class="animated-text banner-title">We turn information into actionable insights</h1>
-                        <p class="animated-text banner-subtext">By offering the resources and know-how as well as
+                        <h1 class="animated-text banner-title"><?php echo t('We turn information into actionable insights'); ?></h1>
+                        <p class="animated-text banner-subtext"><?php echo t('By offering the resources and know-how as well as
                             working in partnership with local medical institutions to meet the growing demand in the
-                            market. </p>
+                            market. '); ?></p>
                     </div>
                 </div>
             </div>
@@ -112,67 +112,52 @@
                 <div class="row">
                     <div class="col-12">
                         <!-- Content -->
-                        <div class="section-title full-width news-animate-text">New at Joint Advisory</div>
+                        <div class="section-title full-width news-animate-text"><?php echo t('New at Joint Advisory'); ?></div>
                         <div class="row news-row">
+                            <?php  
+                                $query = new EntityFieldQuery;
+                                $query->entityCondition('entity_type', 'node')
+                                    ->entityCondition('bundle', 'article')
+                                    ->propertyCondition('status', 1)
+                                    ->propertyOrderBy("created", $direction = 'DESC')
+                                    ->fieldCondition('field_tags', 'tid', 9, '!=')
+                                    ->propertyCondition('language', $language->language, '=');
+
+                                $results = $query->execute();
+                                if(!empty($results['node'])){
+                                    foreach ($results['node'] as $key => $value) {
+                                        $node = node_load($value->nid);
+                                        $image = file_create_url($node->field_banner['und'][0]['uri']);
+
+                                        $options = array('absolute' => TRUE);
+                                        $url = url('node/' . $node->nid, $options);
+
+                                        $term = taxonomy_term_load($node->field_tags['und'][0]['tid']);
+                            ?>
                             <div class="col-lg-4 col-sm-12">
                                 <!--  -->
                                 <div class="news-card" data-aos_hidden="fade-up">
-                                    <a href="#">
+                                    <a href="<?php echo $url; ?>">
                                         <div class="thumbnail"
-                                             style="background-image:url('<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/media/nb1.jpg');"></div>
+                                             style="background-image:url('<?php echo $image; ?>');"></div>
                                     </a>
                                     <div class="article-content">
                                         <a href="#" class="feature-head">
-                                            <span class="category">Newsletter</span>
+                                            <span class="category"><?php echo $term->name; ?></span>
                                             <div class="title">
-                                                JMT Joint Advisory Newsletter
+                                                <?php echo $node->title; ?>
                                             </div>
-                                            <span class="date">February 12, 2019</span>
+                                            <span class="date"><?php echo date('F j, Y', $node->created); ?></span>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <!--  -->
-                            <div class="col-lg-4 col-sm-12">
-                                <!--  -->
-                                <div class="news-card" data-aos_hidden="fade-up" data-aos_hidden-delay="200">
-                                    <a href="#">
-                                        <div class="thumbnail"
-                                             style="background-image:url('<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/media/nb2.jpg');"></div>
-                                    </a>
-                                    <div class="article-content">
-                                        <a href="#" class="feature-head">
-                                            <span class="category">Article</span>
-                                            <div class="title">
-                                                GO JMT Joint Advisory
-                                            </div>
-                                            <span class="date">February 12, 2019</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <div class="col-lg-4 col-sm-12">
-                                <!--  -->
-                                <div class="news-card" data-aos_hidden="fade-up" data-aos_hidden-delay="300">
-                                    <a href="#">
-                                        <div class="thumbnail"
-                                             style="background-image:url('<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/media/N1.png');"></div>
-                                    </a>
-                                    <div class="article-content">
-                                        <a href="#" class="feature-head">
-                                            <span class="category">Article</span>
-                                            <div class="title">
-                                                EMR Evaluations
-                                            </div>
-                                            <span class="date">June 20, 2018</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--  -->
+                            <?php 
+                                    } 
+                                }
+                            ?>
                         </div>
-                        <a href="#" title="" class="link-re">See all posts</a>
+                        <a href="<?php echo base_path(); ?>articles" title="" class="link-re"><?php echo t('See all posts'); ?></a>
                     </div>
                 </div>
             </div>
