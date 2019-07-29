@@ -4,7 +4,7 @@
 	padding: rem-calc(15px) rem-calc(40px);
 }
 
-.btn-primary{
+.btn-primary, input[type=submit], button[type=submit]{
 	color: #FFF;
 	background-color: color('primary');
 	border-color: color('primary');
@@ -19,3 +19,9 @@
 	}
 }
 
+input[type=submit], button[type=submit]{
+	font-family: "Merriweather", serif;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    padding: 0.9375rem 2.5rem;
+}

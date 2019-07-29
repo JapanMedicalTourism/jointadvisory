@@ -26,3 +26,10 @@ form{
 .custom-select.is-valid, .form-control.is-valid, .was-validated .custom-select:valid, .was-validated .form-control:valid{
   border-color: color('primary');
 }
+
+
+#user-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
