@@ -149,8 +149,8 @@
 						// $classroom_code = 'aaxvfn';
 						break;
 
-					case '消化器科Gastroenterology - 患者のケア COP 05（8/8/2019)':
-						$name = 'Gastroenterology - COP 05 (8/8/2019)';
+					case '消化器科Gastroenterology - 患者のケア COP (8/10/2019 7pm-9pm)':
+						$name = 'Gastroenterology - COP 05 (8/10/2019 7pm-9pm)';
 						// $classroom_code = 'tsqhhh';
 						break;
 
@@ -309,7 +309,7 @@
 					// $classroom_code = 'aaxvfn';
 					break;
 
-				case '消化器科Gastroenterology - 患者のケア COP':
+				case '消化器科Gastroenterology - 患者のケア COP (8/10/2019 7pm-9pm)':
 					$zoom_url = 'https://zoom.us/j/325912715';
 					// $classroom_code = 'tsqhhh';
 					break;
