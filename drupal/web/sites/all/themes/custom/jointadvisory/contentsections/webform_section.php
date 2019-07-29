@@ -1,6 +1,15 @@
 <?php  
     $title = $para_banner['#entity']->field_title['und'][0]['value'];
-    $text = $para_banner['#entity']->field_text['und'][0]['value'];
+
+    $para_banner2 = array();
+    if (isset($para_banner['#entity']->field_webform_content['und'])) {
+        foreach ($para_banner['#entity']->field_webform_content['und'] as $para2) {
+            $para_banner_arr2[] = $para2['value'];
+        }
+    }
+
+    $banner_entities2 = entity_load('paragraphs_item', $para_banner_arr2);
+    $paragraphs_banner_render2 = entity_view('paragraphs_item', $banner_entities2, false);
 ?>
 
 <section id="register-section" class="main-section">
@@ -12,9 +21,25 @@
                     </div>
                     <div class="col-lg-6">
                         <!--  -->
-                        <div class="article-content styled-links dark">
-                            <?php echo $text; ?>
-                        </div>
+                        <?php 
+                            foreach ($paragraphs_banner_render2['paragraphs_item'] as $key => $para_banner2) { 
+                                switch ($para_banner2['#entity']->bundle) {
+                                    case 'simple_paragraph':
+                                        $text = $para_banner2['#entity']->field_text['und'][0]['value'];
+
+                                        echo '<div class="article-content styled-links dark">'.$text.'</div>';
+                                        break;
+
+                                    case 'image_section';
+                                        $image = file_create_url($para_banner2['#entity']->field_image['und'][0]['uri']);
+
+                                        echo '<div class="col-md-12 col-sm-12 col-xs-12">
+                                            <img src="'.$image.'" alt="" width="100%" style="vertical-align:middle;">
+                                        </div>';
+                                        break;
+                                }
+                            }
+                        ?>
                         <!-- <a href="#" title="" class="link-re">For the meantime, browse our brochures</a>  -->
                     </div>
                     <div class="col-lg-6">
@@ -25,6 +50,21 @@
                                 $webform_content = render($webform);
                             }else{
                                 $webform_content = '';
+                            }
+
+                            $errors = form_get_errors();
+                            if(!empty($errors)){ 
+                            ?>
+                            <div class="error-div">
+                                <div class="alert alert-danger error-box">
+                                    <ul>
+                                        <?php foreach ($errors as $key => $value) {
+                                           echo "<li>".$value."</li>";
+                                        } ?>
+                                    </ul>
+                                </div>
+                            </div>
+                            <?php
                             }
 
                             echo $webform_content;

@@ -170,7 +170,7 @@
             <div class="container-fluid indent-section">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-title full-width register-animate-text">REGISTER YOUR INTEREST</div>
+                        <div class="section-title full-width register-animate-text"><?php echo t('REGISTER YOUR INTEREST'); ?></div>
                     </div>
                     <div class="col-lg-6">
                         <!--  -->
@@ -192,50 +192,25 @@
                     </div>
                     <div class="col-lg-6">
                         <!-- Form -->
-                        <form class="needs-validation register-form" novalidate id="register-form">
-                            <div class="form-row styled-links dark">
-                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up">
-                                    <label for="validationCustom01"><a>Full Name / Company</a></label>
-                                    <input type="text" class="form-control" id="validationCustom01"
-                                           placeholder="やまだ たろう / ABC Company" required>
-                                    <div class="invalid-feedback">
-                                        Please enter a name.
-                                    </div>
-                                </div>
-                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="100">
-                                    <label for="validationCustom02"><a>Email Address</a></label>
-                                    <input type="text" class="form-control" id="validationCustom02"
-                                           placeholder="hellothere@domain.com" required>
-                                    <div class="invalid-feedback">
-                                        Please provide us your email address.
-                                    </div>
-                                </div>
-                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="200">
-                                    <label for="validationCustom04"><a>Contact Number</a></label>
-                                    <input type="text" class="form-control" id="validationCustom04"
-                                           placeholder="Your valid contact number" required>
-                                    <div class="invalid-feedback">
-                                        Please provide us a phone number so we can contact you.
-                                    </div>
-                                </div>
-                                <div class="col-md-12 mb-3" data-aos_hidden="fade-up" data-aos_hidden-delay="300">
-                                    <label for="validationCustom03"><a>Message</a></label>
-                                    <textarea class="form-control" id="validationCustom03" rows="4" required
-                                              placeholder="Leave us your message and we'll be in touch shortly."></textarea>
-                                    <div class="invalid-feedback">
-                                        Please leave us a message.
-                                    </div>
+                        <?php  
+                            $errors = form_get_errors();
+                            if(!empty($errors)){ 
+                            ?>
+                            <div class="error-div">
+                                <div class="alert alert-danger error-box">
+                                    <ul>
+                                        <?php foreach ($errors as $key => $value) {
+                                           echo "<li>".$value."</li>";
+                                        } ?>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="captcha-wrapper">
-                                    <img src="<?php echo drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/captcha-placeholder.png" alt="captcha-placeholder"
-                                         height="80px">
-                                </div>
-                            </div>
-                            <div data-aos_hidden="fade-up" data-aos_hidden-delay="400"><button class="btn btn-primary"
-                                        type="submit">Send Details</button></div>
-                        </form>
+                            <?php
+                            }
+
+                            $block = module_invoke('webform', 'block_view', 'client-block-56');
+                            print render($block['content']);
+                        ?>
                         <!-- End Form -->
                     </div>
                 </div>
