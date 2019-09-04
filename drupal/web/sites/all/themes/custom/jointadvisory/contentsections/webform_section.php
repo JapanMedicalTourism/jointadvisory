@@ -48,6 +48,9 @@
                                 #### Webform
                                 $webform = $content['webform'];
                                 $webform_content = render($webform);
+                            }else if(isset($para_banner['#entity']->field_webform_block['und'][0]['value'])){
+                                $block = module_invoke('webform', 'block_view', $para_banner['#entity']->field_webform_block['und'][0]['value']);
+                                print render($block['content']);
                             }else{
                                 $webform_content = '';
                             }

@@ -99,5 +99,9 @@
 					});
 				}, false);
 			})();
+
+		$('.stats-card').each(function(){
+			$('h2', this).addClass('stats-desc smaller');
+		});
 	})(jQuery);
 </script>

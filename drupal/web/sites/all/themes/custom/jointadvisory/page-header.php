@@ -1,3 +1,4 @@
+<?php global $base_url; ?>
 <div class="sidebar">
 
     <!--   This section should be at the top -->
@@ -216,7 +217,7 @@
 
                                 <a class="navbar-brand" href="/">
 
-                                    <img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/logo.png" height="60" class="d-inline-block align-top" alt="">
+                                    <img src="<?php echo $base_url . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/logo.png" height="60" class="d-inline-block align-top" alt="">
 
                                 </a>
 
@@ -554,7 +555,7 @@
 
 
 
-                                        <li class="nav-item dropdown megamenu-li">
+                                        <!-- <li class="nav-item dropdown megamenu-li">
 
                                             <a class="nav-link dropdown-toggle" href="" id="about-megamenu" data-toggle="dropdown"
 
@@ -562,7 +563,7 @@
 
                                             aria-expanded="false"><img
 
-                                            src="<?php echo base_path() . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/search.svg" alt="Search Joint Advisory" width="20px"></a>
+                                            src="<?php echo $base_url . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/search.svg" alt="Search Joint Advisory" width="20px"></a>
 
                                             <div class="dropdown-menu megamenu" aria-labelledby="about-megamenu">
 
@@ -630,7 +631,7 @@
 
 
 
-                                                        </li>
+                                                        </li> -->
 
                                                         <li><div id="google_translate_element"></div></li>
 

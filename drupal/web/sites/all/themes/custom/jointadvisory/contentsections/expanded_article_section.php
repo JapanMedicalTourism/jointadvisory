@@ -2,8 +2,10 @@
     $image = file_create_url($para_banner['#entity']->field_image['und'][0]['uri']);
     $title = $para_banner['#entity']->field_title['und'][0]['value'];
     $description = $para_banner['#entity']->field_description['und'][0]['value'];
-    $button_title = $para_banner['#entity']->field_cta_button['und'][0]['title'];
-    $button_link = $para_banner['#entity']->field_cta_button['und'][0]['url'];
+    if(isset($para_banner['#entity']->field_cta_button['und'][0]['title'])){
+        $button_title = $para_banner['#entity']->field_cta_button['und'][0]['title'];
+        $button_link = $para_banner['#entity']->field_cta_button['und'][0]['url'];
+    }
 ?>
 
 <section id="expanded-article-section" class="main-section">
@@ -23,7 +25,9 @@
                                 <div class="description styled-links dark">
                                     <?php echo $description; ?>
                                 </div>
-                                <a href="<?php echo $button_link; ?>" title="" class="link-re"><?php echo $button_title; ?></a>
+                                <?php if(isset($para_banner['#entity']->field_cta_button['und'][0]['title'])){ ?>
+                                    <a href="<?php echo $button_link; ?>" title="" class="link-re"><?php echo $button_title; ?></a>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

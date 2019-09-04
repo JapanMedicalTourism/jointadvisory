@@ -1,3 +1,4 @@
+<?php global $base_url; ?>
 <footer <?php if(isset($_GET['q']) && ($_GET['q'] == 'trainings/codmancommunications-interpreter-training-application-form' || $_GET['q'] == 'node/43' || $_GET['q'] == 'node/44')){ echo 'style="display: none;"'; } ?>>
 
         <div class="footer-wrapper">
@@ -14,7 +15,7 @@
 
                         </div>
 
-                        <img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/footer-logo.png" height="60px" alt="">
+                        <img src="<?php echo $base_url . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/footer-logo.png" height="60px" alt="">
 
                         <small class="styled-links dark">
 
@@ -58,21 +59,21 @@
 
                         <div class="vertical-link-list dark">
 
-                            <a href="./index.html">Home</a>
+                            <a href="/">Home</a>
 
-                            <a href="./about-us.html">About Us</a>
+                            <a href="/about-us">About Us</a>
 
-                            <a href="./experts.html">The Experts</a>
+                            <a href="/about-us/the-team">The Experts</a>
 
-                            <a href="./by-the-numbers.html">By the Numbers</a>
+                            <a href="/numbers">By the Numbers</a>
 
-                            <a href="./services.html">Services</a>
+                            <a href="/services">Services</a>
 
-                            <a href="./investments.html">Investments</a>
+                            <a href="/services/investment-management">Investments</a>
 
-                            <a href="./contact-us.html">Contact</a>
+                            <a href="/contact-us">Contact</a>
 
-                            <a href="./contact-us.html">Terms of Use</a>
+                            <a href="#">Terms of Use</a>
 
                         </div>
 
@@ -132,11 +133,11 @@
 
                         <div class="vertical-link-list dark">
 
-                            <a href="#"><img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/facebook.svg" height="25px" alt=""> Facebook</a>
+                            <a href="#"><img src="<?php echo $base_url . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/facebook.svg" height="25px" alt=""> Facebook</a>
 
-                            <a href="#"><img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/twitter.svg" height="25px" alt=""> Twitter</a>
+                            <a href="#"><img src="<?php echo $base_url . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/twitter.svg" height="25px" alt=""> Twitter</a>
 
-                            <a href="#"><img src="<?php echo base_path() . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/linkedin.svg" height="25px" alt=""> LinkedIn</a>
+                            <a href="#"><img src="<?php echo $base_url . '/' . drupal_get_path('theme', 'jointadvisory'); ?>/assets/img/icons/linkedin.svg" height="25px" alt=""> LinkedIn</a>
 
                         </div>
 
