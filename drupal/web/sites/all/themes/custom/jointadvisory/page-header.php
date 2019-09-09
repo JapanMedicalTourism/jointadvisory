@@ -223,7 +223,7 @@
 
                                 <div class="collapse navbar-collapse" id="ja-navbar-contents">
 
-                                    <ul class="navbar-nav ml-auto" <?php if(isset($_GET['q']) && ($_GET['q'] == 'trainings/codmancommunications-interpreter-training-application-form' || $_GET['q'] == 'node/43' || $_GET['q'] == 'node/44')){ echo 'style="display: none;"'; } ?>>
+                                    <ul class="navbar-nav ml-auto">
 
                                     <?php  
 

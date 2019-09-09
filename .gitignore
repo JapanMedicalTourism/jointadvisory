@@ -173,3 +173,4 @@ Thumbs.db
 !.gitignore
 !.editorconfig
 !.phpcs.xml.dist
+drupal/web/sites/all/sftp-config.json

@@ -1,5 +1,5 @@
 <?php global $base_url; ?>
-<footer <?php if(isset($_GET['q']) && ($_GET['q'] == 'trainings/codmancommunications-interpreter-training-application-form' || $_GET['q'] == 'node/43' || $_GET['q'] == 'node/44')){ echo 'style="display: none;"'; } ?>>
+<footer>
 
         <div class="footer-wrapper">
 
